@@ -1,0 +1,46 @@
+/* IMPORTANDO A FONTE ROBOTO MONO */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+/* FAZENDO O RESET DO CSS E ADICIONANDO A FONTE ROBOTO MONO PARA TODO O TEXTO */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+
+
+/* CRIANDO AS VARIAVEÍS COM AS CORES DO SITE */
+:root{
+    --color-primary: #2E662E;
+    --color-secondary: #88D775;
+    --color-action-primary: #D17549;
+    --color-action-secondary: #BE5A2A;
+    --color-auxiliary-primary: #462969;
+    --color-auxiliary-secondary: #DD97AE;
+    --color-theme-clear: #FFF;
+    --color-theme-dark: #1B1616;
+    --color-alert-delete: #B31A15;
+}
+
+
+
+/* PASSO-A-PASSO DE COMO USAR  A VARIÁVEL: */
+
+/* Passo 1: Para poder usar essas variváveis no seu arquivo css separado, precisa-se importar este arquivo para lá */
+/* Exemplo: No topo do seu arquivo você deve colocar o seguinte código: */
+/* 
+    @import "./css/styleGeral.css"; -----> Para está linha funcionar, o seu arquivo deve estar dentro da mesma página que ele
+*/
+
+
+/* Passo 2: Ele é usada da mesma forma que aprendemos a usar iniciamente, a únca diferença é que ao invés de digitar o valor chamamos a variável */
+
+/* Exemplo:
+    div{
+        background-color: var(--color-primary); -----> Mudamos a cor de fundo para o verde escuro
+        color: var(--color-theme-clear); -----> Mudamos a cor do texto para branco
+    }
+*/
+
