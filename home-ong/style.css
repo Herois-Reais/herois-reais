@@ -1,0 +1,7 @@
+@import "../css/styleGeral.css";
+
+#perfil-ong{
+    width: 250px;
+    height: 100vh;
+    background-color: var(--color-primary);
+}
