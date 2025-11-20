@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --cor-fundo-verde: #8ed08f; 
+    --cor-roxo-bg: #5f4a86;   
+    --cor-cinza-claro: #f5f5f5;
+}
+
+
+html {
+    background-color: var(--cor-fundo-verde);
+    height: 100%; 
+}
+
+body {
+    min-height: 100vh; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.header-acordos {
+    background-color: var(--cor-roxo-bg); 
+    padding: 1.5rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-acordos .container-cabecalho {
+    max-width: 960px; 
+    width: 90%;
+    display: flex;
+    align-items: center;
+    position: relative; 
+}
+
+.botao-voltar {
+    color: white !important; 
+    background: none !important;
+    border: none !important;
+    padding-left: 0;
+    z-index: 10; 
+}
+
+.botao-voltar .icon {
+    font-size: 1.5rem; 
+}
+
+.titulo-acordos {
+    color: white !important;
+    font-weight: bold;
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0 !important;
+    font-size: 1.75rem; 
+    padding: 0 50px; 
+    white-space: normal;
+    text-align: center;
+}
+
+
+
+.conteudo-principal-acordos {
+    padding-top: 2rem; 
+    padding-bottom: 4rem; 
+    background-color: transparent; 
+}
+
+.caixa-conteudo-roxo {
+    background-color: var(--cor-roxo-bg) !important; 
+    border-radius: 25px; 
+    box-shadow: none;
+    padding: 30px !important; 
+}
+
+.caixa-conteudo-roxo .content p {
+    color: white; 
+    line-height: 1.6;
+}
+
+.caixa-conteudo-roxo .content h2 {
+    color: white ;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.separador-acordos {
+    background-color: rgba(255, 255, 255, 0.4); 
+    height: 1px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+
+.rodape {
+    background-color: var(--cor-roxo-bg); 
+    color: white; 
+    padding: 3rem 1.5rem;
+    border-top: 3px solid var(--cor-fundo-verde); }
+
+.rodape-titulo {
+    color: var(--cor-fundo-verde) ;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.rodape ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.rodape a {
+    color: var(--cor-cinza-claro) !important;
+    text-decoration: none;
+}
+
+.rodape a:hover {
+    text-decoration: underline;
+}
+
+.botao-rede-social {
+    background-color: var(--cor-fundo-verde) !important;
+    border-color: var(--cor-fundo-verde) !important;
+    color: var(--cor-roxo-bg) !important;
+    margin-right: 0.5rem;
+    box-shadow: none;
+}
+
+@media screen and (max-width: 768px) {
+    .rodape .column {
+        text-align: center !important;
+    }
+    .rodape .buttons {
+        justify-content: center;
+    }
+}
+
+
