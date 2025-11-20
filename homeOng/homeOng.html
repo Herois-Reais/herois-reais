@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home ONG</title>
+        <!-- ADICIONANDO O ÍCONE DE CASA NA PÁGINA -->
+        <link rel="shortcut icon" href="./icones/iconeCasa.svg" type="image/x-icon">
+        
+        <!-- IMPORTANDO OS ÍCONES -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+        <!-- LINK DO BULMA -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+        
+        <!-- LINKS DOS CSS -->
+        <link rel="stylesheet" href="./css/styleHomeOng.css">
+        <link rel="stylesheet" href="./css/resposiveStyleHomeOng.css">
+    </head>
+
+    <body>
+        <!-- MAIN QUE ENVOLVE TUDO  -->
+        <main class="mainHomeOng">
+
+
+            <!-- ---------------------------- PERFIL DA ONG -->
+            <!-- ÁREA DO PERFIL DO USUÁRIO MOBILE -->
+            <section class="areaMenuHamburguer">
+                <button class="button btnMenuHamburguer" id="btnMenuH">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-x"></i>
+                </button>
+            </section>
+
+
+            <!-- ÁREA DO PERFIL WEB-->
+            <section class="card perfilOngContainer" id="perfilOngC">
+                
+                <div class="excluirPerfilOng"> <!-- Botão excluir perfil -->
+                    <button class="button btnExcluir">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div> <!-- FIM - Botão excluir perfil -->
+
+                <div class="perfilOngContent"> <!-- Container das informações do perfil -->
+                    <figure class="cardImagemPerfil"> <!-- Imagem de perfil -->
+                        <img class="is-rounded imagemPerfil" src="https://pt.quizur.com/_image?href=https://img.quizur.com/f/img5d4442d31c68a2.24095743.jpg?lastEdited=1564754652&w=1024&h=1024&f=webp" />
+                    </figure> <!-- FIM - Imagem de perfil -->
+
+                    <!-- CONTAINER DAS INPUTS COM INFORMAÇÕES DAS ONGs -->
+                    <form class="camposInfoPerfilOng">
+                        <input class="input" type="text" placeholder="Nome fantasia da ONG"/>
+                        <input class="input" type="text" placeholder="Nome completo da ONG"/>
+                        <input class="input" type="text" placeholder="00.000.000/0000-00" maxlength="14"/>
+                        <input class="input" type="email" placeholder="ongX@gmail.com"/>
+
+                        <div class="senhaPerfilOng"> <!-- Div para poder colocar o olho de ver ou não a senha -->
+                            <input class="input" type="current-password" placeholder="*********"/>
+                            <button class="bntMostrarSenhaPerfilOng">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div> <!-- FIM - Div para poder colocar o olho de ver ou não a senha -->
+
+                        <input class="input" type="text" placeholder="(00) 0 0000 - 0000"/>
+                        <input class="input" type="text" placeholder="https://www.ongx.com/"/>
+                        <input class="input" type="text" placeholder="Porte: Médio porte"/>
+                        <input class="input" type="text" placeholder="Ramo: Assistência social"/>
+                        <input class="input" type="text" placeholder="CEP: 00000-000"/>
+                        <input class="input" type="text" placeholder="Nº: 00"/>
+                    </form> <!-- FIMM - CONTAINER DAS INPUTS COM INFORMAÇÕES DAS ONGs -->
+
+                    <!-- Botão para salvar as alterações do perfil da ong-->
+                    <div class="btnSalvarAlteracoesContent">
+                        <button class="button is-normal is-responsive btnSalvarAlteracoes">Salvar alterações</button>
+                    </div> <!-- Botão para salvar as alterações do perfil da ong-->
+
+                </div> <!-- FIM - Container das informações do perfil -->
+
+            </section> <!-- FIM - ÁREA DO PERFIL -->
+            
+
+
+            <!-- ---------------------------- GRÁFICOS GERAIS -->
+
+            <!-- SEÇÃO QUADRO GERAL CONTAINER -->
+            <section class="conteudoMainContainer">
+
+                <!-- SEÇÃO TÍTULO E GRÁFICOS -->
+                <section class="quadroGeralContainer">
+                    <h1>Quadro geral</h1>
+
+                    <!-- Gráficos Gerais -->
+                    <div class="quadrosGeraisOng">
+
+                        <div class="card quadroGeral"> <!-- Card do gráfico geral das doações -->
+
+                            <div class="itensArrecadados"> <!-- Visão geral dos itens das doações -->
+                                <h2>Doações totais: <span id="totalItensArrecadados">100</span></h2>
+                                <ul>
+                                    <li>Pares de calçados: <span id="calcadosArrecadados">10</span></li>
+                                    <li>Peças de roupas: <span id="roupasArrecadadas">60</span></li>
+                                    <li>Brinquedos: <span id="brinquedosArrecadados">20</span></li>
+                                    <li>Alimentos não perecíveis: <span id="alimentosArrecadados">10</span></li>
+                                </ul>
+                            </div> <!-- FIM - Visão geral dos itens das doações -->
+                
+                            <div class="porcentagemItensArrecadados"> <!-- Gráfico geral das doações -->
+                                <h2>Meta de doações</h2>
+                                <div class="graficoDoacoes">
+                                    <canvas id="meuGrafico"></canvas>
+                                </div>
+                            </div> <!-- FIM - Gráfico geral das doações -->
+
+                        </div> <!-- FIM - Card do gráfico geral das doações -->
+                
+                
+                        <div class="card quadroGeral"> <!-- Card do gráfico geral dos voluntários -->
+                            
+                            <div class="itensArrecadados"> <!-- Visão geral dos voluntários e projetos -->
+                                <h2>Voluntários totais: <span id="totalVoluntarios">10</span></h2>
+                                <ul>
+                                    <li>Projeto: <span id="totalVoluntariosPojeto">10</span></li>
+                                </ul>
+                            </div> <!-- FIM -  Visão geral dos voluntários e projetos -->
+                
+                            <div class="porcentagemItensArrecadados"> <!-- Gráfico geral dos voluntários -->
+                                <h2>Meta de voluntários</h2>
+                                <div class="graficoVoluntarios">
+                                    <canvas id="meuGrafico2"></canvas>
+                                </div>
+                            </div> <!-- FIM - Gráfico geral dos voluntários -->
+
+                        </div> <!-- FIM - Card do gráfico geral dos voluntários -->
+                
+                    </div> <!-- Fim - Gráficos Gerais -->
+                </section> <!-- FIM - SEÇÃO TÍTULO E GRÁFICOS -->
+                
+                
+
+                <!-- ---------------------------- CARD DAS CAMPANHAS, DOAÇOES E VONTARIADOS -->
+                
+                <section class="card" id="cardCampDoaVolsContainer"> <!-- Card que envolve todos os card de projetos da ONG  -->
+                    
+                    <div class="cardCampDoaVolTitleEPlus"> <!-- Título e Botão de adionar card de projeto da ONG  -->
+                        <h2>Suas campanhas, pedidos de doações e voluntariados</h2>
+                        <button class="button btnCardCampDoaVolIconPlus">
+                            <a href="../criarCardProjetoOng/criarCardProjetoOng.html">
+                                <i class="fa-solid fa-plus"></i>
+                            </a>
+                        </button>
+                    </div> <!-- FIM - Título e Botão de adionar card de projeto da ONG  -->
+
+                    <div class="card sessoesCardsCriados"> <!-- Seção de um projeto da ONG  -->
+
+                        <div class="cardCampDoaVol"> <!-- Conteúdo da seção de um projeto da ONG -->
+                            
+                            <div class="card cardProjeto"> <!-- Card do projeto da ong -->
+
+                                <div class="card-image"> <!-- Imagem do card do projeto da ong -->
+                                    <figure class="image is-4by3">
+                                        <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Placeholder image" />
+                                    </figure>
+                                </div> <!-- FIM - Imagem do card do projeto da ong -->
+
+                                <div class="card-content"> <!-- Informações do card do projeto da ong -->
+                                    <div class="content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                                        iaculis mauris.</p>
+                                    </div>
+                                </div> <!-- FIM - Informações do card do projeto da ong -->
+
+                            </div> <!-- FIM - Card do projeto da ong -->
+
+                            <div class="textCard"> <!-- Dados sobre o projeto da ong -->
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus neciaculis mauris.</p>
+                            </div> <!-- FIM - Dados sobre o projeto da ong -->
+
+                            <div class="cardBtns"> <!--Botões editar e excluir do projeto da ong-->
+                                <button class="button is-medium is-responsive btnEditarDadosCard">Editar dados</button>
+                                <button class="button is-medium is-responsive btnExcluirCard">Excluir</button>
+                            </div> <!-- FIM Botões editar e excluir do projeto da ong-->
+
+                        </div> <!-- FIM - Conteúdo da seção de um projeto da ONG -->
+
+                    </div> <!-- FIM - Seção de um projeto da ONG  -->
+
+                </section> <!-- FIM - Card que envolve todos os card de projetos da ONG  -->
+
+            </section> <!-- FIM - SEÇÃO QUADRO GERAL CONTAINER -->
+
+        </main> <!-- FIM - MAIN QUE ENVOLVE TUDO  -->
+
+
+        <!-- IMPORTANDO A BIBLIOTECA DOS GRÁFICOS -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+
+        <!-- LINKANDO COM O JS -->
+        <script type="module" src="./js/MudancaPerfilUsuarioTema.js"></script>
+        <script type="module" src="./js/graficoDinamico.js"></script>
+    </body>
+</html>
+<!-- Esse  input abre a parte de seus arquivos para poder pegar a foto -->
+<!-- <input type="file" id="fileInput" accept="image/*"> -->
