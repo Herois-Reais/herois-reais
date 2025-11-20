@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Criar card</title>
+        <!-- ADICIONANDO O ÍCONE AO LADO DO TILTE -->
+        <link rel="shortcut icon" href="./icones/listCard.svg" type="image/x-icon">
+
+        <!-- IMPORTANDO OS ÍCONES -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- IMPORTANDO O FRAMEWORK BULMA -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+        <!-- IMPORTANDO O CSS -->
+        <link rel="stylesheet" href="./css/estiloCriarCardProjetoOng.css">
+        <link rel="stylesheet" href="./css/ResponsiveEstiloCriarCardProjetoOng.css">
+    </head>
+
+    <body>
+        <div class="containerAll">
+            <!-- BOTÃO DE VOLTAR E O TÍTULO -->
+            <header>
+                <button class="button btnVoltarHomeOng">
+                    <a href="../homeOng/homeOng.html" target="_self" rel="noopener noreferrer">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </a>
+                </button>
+                <h2>Crie e peça ajuda aos nossos heróis!</h2>
+            </header> <!-- FIM - BOTÃO DE VOLTAR E O TÍTULO -->
+
+            <!-- CARD PARA PODER CRIAR O CARD DE PROJETO DA ONG -->
+            <main class="card mainContent">
+
+                <!-- CONTAINER PARA PEGAR AS INFORMAÇÕES DO CARD -->
+                <div class="card cardContainer">
+
+                    <!-- CAMPO PARA PEGAR A IMAGEM E COLOCAR A DESCRIÇÃO -->
+                    <div class="card cardImgDescricao">
+                        <div class="cardImg">
+                            <input type="file" class="inputImg" id="imageUpload" accept="image/*">
+                        </div>
+
+                        <div class="cardDescricao">
+                            <textarea name="cardTextDescricao" id="cardTextDescricao" class="cardTextDescricao"
+                                placeholder="Breve descrição:"></textarea>
+                        </div>
+                    </div> <!-- FIM - CAMPO PARA PEGAR A IMAGEM E COLOCAR A DESCRIÇÃO -->
+
+                    <!-- CAMPO DAS INPUTS -->
+                    <div class="card cardForm">
+                        <form action="" class="card cardInputs">
+                            <input type="text" class="input inputs" placeholder="Título:">
+                            <input type="date" class="input inputs" placeholder="Data:">
+                            <input type="text" class="input inputs" placeholder="Duração:">
+                            <input type="text" class="input inputs" placeholder="Tempo para descanso:">
+                            <input type="text" class="input inputs" placeholder="Quantidade de voluntários:">
+
+                            <!-- SELEÇÃO DO TIPO DE DOAÇÃO DO CARD -->
+                            <select name="tipoDoacao" id="tipoDoacao" class="inputs selectCard">
+                                <option value=""></option>
+                                <option value="tempo">Tempo</option>
+                                <option value="roupa">Roupa</option>
+                                <option value="calcado">Calçado</option>
+                                <option value="brinquedo">Brinquedos</option>
+                                <option value="materiaisReciclaveis">Materiais Reciclaveís</option>
+                                <option value="alimentos">Alimentos</option>
+                            </select> <!-- FIM - SELEÇÃO DO TIPO DE DOAÇÃO DO CARD -->
+
+                            <input type="text" class="input inputs" placeholder="Quantidade de itens:">
+
+                            <!-- SELEÇÃO DOS BENEFÍCIOS DA AÇÃO DO CARD -->
+                            <select name="beneficiosAcao" id="beneficiosAcao" class="inputs selectCard">
+                                <option value=""></option>
+                                <optgroup label="Certificado:">
+                                    <option value="certificadoParticipacao">Participação</option>
+                                    <option value="certificadoHorasComplemtares">Horas complementares</option>
+                                    <option value="certificadoVoluntariado">Voluntariado</option>
+                                </optgroup>
+                                <option value="descontoParceiro">Desconto em produtos de empresa parceira</option>
+                                <option value="cursoExclusivo">Acesso a curso exclusivo</option>
+                                <option value="brindeExclusivo">Brinde exclusivo da ONG</option>
+                                <option value="semBeneficios">No momento não temos</option>
+                            </select> <!-- FIM - SELEÇÃO DOS BENEFÍCIOS DA AÇÃO DO CARD -->
+                        </form>
+                    </div> <!-- FIM - CAMPO DAS INPUTS -->
+
+
+
+                </div> <!-- FIM - CONTAINER PARA PEGAR AS INFORMAÇÕES DO CARD -->
+
+                <button type="submit" class="button is-medium btnCriarCard">Criar Card</button>
+
+            </main> <!-- FIM - CARD PARA PODER CRIAR O CARD DE PROJETO DA ONG -->
+        </div>
+    </body>
+</html>

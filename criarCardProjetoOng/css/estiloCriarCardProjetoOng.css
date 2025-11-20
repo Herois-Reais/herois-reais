@@ -1,0 +1,178 @@
+/* IMPORTANDO O ESTILO GERAL */
+@import '../../css/styleGeral.css';
+
+body, html{
+    background-color: var(--color-primary);
+}
+
+.containerAll{
+    width: 100%;
+    padding-bottom: 55px;
+    background-color: var(--color-primary);
+}
+
+/* ------------------------------------- BOTÃO DE VOLTAR E O TÍTULO */
+header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 85%;
+    height: auto;
+    justify-self: center;
+    padding-top: 50px;
+    gap: 300px;
+}
+
+header h2{
+    color: var(--color-theme-clear);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.btnVoltarHomeOng{
+    width: 45px;
+    height: 45px;
+    background-color: var(--color-action-primary);
+    border: none;
+}
+
+.btnVoltarHomeOng:hover{
+    border: 0.5px solid var(--color-theme-clear);
+    box-shadow: 0px 0px 3px 1px rgba(255,255,255,1);
+    -webkit-box-shadow: 0px 0px 3px 1px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 3px 1px rgba(255,255,255,1);
+}
+
+.btnVoltarHomeOng i{
+    color: var(--color-theme-clear);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+
+/* ------------------------------------- CARD PARA PODER CRIAR O CARD DE PROJETO DA ONG */
+.mainContent{
+    background-color: var(--color-secondary);
+    width: 85%;
+    height: auto;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+
+.cardContainer{
+    height: auto;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+
+/* Parte da imagem e descrição */
+.cardImgDescricao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    /* background-color: purple; */
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.inputImg{
+    width: 350px;
+    text-decoration: none;
+}
+
+.cardTextDescricao{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    resize: none;
+    padding: 10px;
+    border: none;
+    color: var(--color-primary);
+    font-size: 16px;
+}
+
+.cardTextDescricao:focus{
+    outline: none;
+    border: 1px solid var(--color-theme-dark);
+    box-shadow: 0px 0px 4px 2px var(--color-primary);
+    -webkit-box-shadow: 0px 0px 4px 2px var(--color-primary);
+    -moz-box-shadow: 0px 0px 4px 2px var(--color-primary);
+}
+
+
+/* Parte das inputs */
+.cardForm{
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    justify-content: center;
+    align-content: center;
+}
+
+.cardInputs{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: transparent;
+    row-gap: 30px;
+    border: none;
+    box-shadow: none;
+    padding: 20px;
+}
+
+.inputs{
+    align-self: center;
+    justify-self: center;
+    width: 350px;
+    height: 40px;
+    background-color: var(--color-theme-clear);
+    color: var(--color-primary);
+    border: none;
+}
+
+.inputs:focus{
+    border: 2px solid var(--color-primary);
+    box-shadow: 0px 0px 2px 1px var(--color-primary);
+    -webkit-box-shadow: 0px 0px 2px 1px var(--color-primary);
+    -moz-box-shadow: 0px 0px 2px 1px var(--color-primary);
+}
+
+.inputs::placeholder{
+    color: var(--color-primary);
+}
+
+.selectCard{
+    outline: none;
+    border-radius: 5px;
+}
+
+
+/* Parte do botão criar */
+.btnCriarCard{
+    background-color: var(--color-action-secondary);
+    border: none;
+    margin-bottom: 30px;
+}
+
+.btnCriarCard:hover{
+    border: 0.5px solid var(--color-primary);
+    box-shadow: 0px 0px 3px 1px rgba(0,0,0,1);
+    -webkit-box-shadow: 0px 0px 3px 1px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 3px 1px rgba(0,0,0,1);
+}

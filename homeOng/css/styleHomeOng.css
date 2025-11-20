@@ -1,0 +1,323 @@
+/* IMPORTANDO O ESTILO GERAL */
+@import "../../css/styleGeral.css";
+
+
+body{
+    background-color: #cbffe3;
+}
+
+.mainHomeOng{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+
+/* ------------------------------ ESCONDENDO O MENU HAMBURGUER */
+.areaMenuHamburguer, .fa-x{
+    display: none;
+}
+
+
+
+/* ------------------------------ PERFIL DO USUÁRIO */
+
+.perfilOngContainer{
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    height: auto;
+    background-color: var(--color-primary);
+    border-radius: 0;
+    margin-bottom: 0 !important;
+}
+
+.excluirPerfilOng{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.btnExcluir{
+    width: 35px;
+    height: 35px;
+    background-color: var(--color-alert-delete);
+    color: var(--color-theme-clear);
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 15px;
+    border: none;
+    border-color: transparent;
+}
+
+.btnExcluir:hover, .btnCardCampDoaVolIconPlus:hover, .btnExcluirCard:hover, .btnEditarDadosCard:hover{
+    border: 0.5px solid var(--color-theme-clear);
+    box-shadow: 0px 0px 3px 1px rgba(255,255,255,1);
+    -webkit-box-shadow: 0px 0px 3px 1px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 3px 1px rgba(255,255,255,1);
+}
+
+.perfilOngContent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.cardImagemPerfil{
+    width: 50%;
+}
+
+.imagemPerfil{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+
+.camposInfoPerfilOng{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 20px;
+}
+
+.senhaPerfilOng{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.senhaPerfilOng input{
+    width: 100%;
+}
+
+.bntMostrarSenhaPerfilOng{
+    position: absolute;
+    right: 10px;
+}
+
+.bntMostrarSenhaPerfilOng i{
+    z-index: 10;
+}
+
+.camposInfoPerfilOng input{
+    width: 230px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: 3px solid var(--color-theme-clear);
+    transition: all 0.5s ease-out;
+}
+
+.camposInfoPerfilOng input::placeholder, .bntMostrarSenhaPerfilOng i{
+    color: var(--color-theme-clear);
+}
+
+.camposInfoPerfilOng input:focus-visible{
+    border-radius: 10px;
+    border-color: var(--color-theme-clear);
+    outline: 2px solid var(--color-theme-clear);
+}
+
+.btnSalvarAlteracoesContent{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    color: var(--color-theme-clear);
+}
+
+.btnSalvarAlteracoes{
+    padding: 10px 15px;
+    background-color: var(--color-action-primary);
+    border: none;
+    transition: background-color 2s;
+    color: var(--color-theme-clear);
+}
+
+.btnSalvarAlteracoes:hover{
+    background-color: var(--color-action-secondary);
+}
+
+
+
+
+/* ------------------------------- GRÁFICOS GERAIS */
+.conteudoMainContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
+    gap: 50px;
+    margin: 50px 0;
+}
+
+.quadroGeralContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quadroGeralContainer h1{
+    color: var(--color-primary);
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.quadrosGeraisOng{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 30px;
+    width: 90%;
+}
+
+.quadroGeral{
+    background-color: var(--color-auxiliary-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+    width: 50%;
+    margin-bottom: 0 !important;
+}
+
+.itensArrecadados h2{
+    font-weight: bold;
+    font-size: 17.5px;
+    color: var(--color-action-primary);
+}
+
+.itensArrecadados, .porcentagemItensArrecadados h2{
+    font-size: 15px;
+    color: var(--color-theme-clear);
+}
+
+.itensArrecadados{
+    margin-left: 30px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.porcentagemItensArrecadados{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.graficoVoluntarios, .graficoDoacoes{
+    height: 200px;
+    width: 200px;
+}
+
+
+
+/* ---------------------------- CARD DAS CAMPANHAS, DOAÇOES E VONTARIADOS */
+#cardCampDoaVolsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(209, 116, 73, 0.771);
+    width: 90%;
+    gap: 50px;
+}
+
+.cardCampDoaVolTitleEPlus{
+    display: flex;
+    color: var(--color-primary);
+    font-size: 30px;
+    justify-content: space-between;
+    align-items: center;
+    width: 87%;
+    margin-top: 20px;
+    gap: 30px;
+}
+
+.cardCampDoaVolTitleEPlus h2{
+    font-weight: bold;
+}
+
+.btnCardCampDoaVolIconPlus{
+    background-color: var(--color-auxiliary-primary);
+    width: 40px;
+    height: 40px;
+    border: none;
+}
+
+.btnCardCampDoaVolIconPlus a i{
+    font-size: 30px;
+    margin: 0 auto;
+    color: var(--color-action-secondary);
+}
+
+
+
+/* ------------------------------------------ ESTILIZAÇÃO DOS CARDS DE CAMPANHAS, DOAÇÕES E VOLUNTARIADOS */
+.sessoesCardsCriados{
+    background-color: var(--color-auxiliary-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding: 30px 0;
+    margin-bottom: 50px;
+}
+
+.cardCampDoaVol{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    gap: 50px;
+}
+
+.cardProjeto{
+    width: 400px;
+    background-color: var(--color-theme-clear);
+    color: var(--color-theme-dark);
+    margin-bottom: 0 !important;
+}
+
+.textCard{
+    color: var(--color-theme-clear);
+    font-size: 15px;
+}
+
+.cardBtns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.btnEditarDadosCard{
+    background-color: var(--color-action-secondary);
+}
+
+.btnExcluirCard{
+    background-color: var(--color-alert-delete);
+}
+
+.btnExcluirCard, .btnEditarDadosCard{
+    border: none;
+}
+

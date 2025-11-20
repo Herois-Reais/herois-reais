@@ -1,0 +1,358 @@
+/* IMPORTANDO O ESTILO DA PÁGINA PARA DEIXÁ-LO RESPONSIVO */
+@import "./styleHomeOng.css";
+
+
+
+/* ----------------------------------- APLICANDO O ESTILO PARA A RESPONSIVIDADE DO LAYOUT DO SITE */
+
+@media (max-width: 1400px){
+    .perfilOngContainer{
+        display: flex;
+        top: 0;
+        left: 0;
+    }
+
+    .quadroGeralContainer h1{
+        font-size: 40px;
+    }
+
+    .quadrosGeraisOng{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .quadroGeral{
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .itensArrecadados h2{
+        font-size: 25px;
+    }
+
+    .itensArrecadados, .porcentagemItensArrecadados h2{
+        font-size: 20px;
+    }
+
+    .itensArrecadados{
+        margin-left: 0 !important;
+        gap: 15px;
+    }
+
+    .graficoVoluntarios, .graficoDoacoes{
+        height: 250px;
+        width: 250px;
+    }
+
+    /* CARD DOS PROJETOS */
+
+    .btnCardCampDoaVolIconPlus{
+        width: 50px;
+        height: 50px;
+    }
+
+    .btnCardCampDoaVolIconPlus i{
+        font-size: 40px;
+    }
+
+    #cardCampDoaVolsContainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cardCampDoaVolTitleEPlus{
+        width: 90%;
+        gap: 30px;
+    }
+
+    .sessoesCardsCriados{
+        width: 90%;
+    }
+
+    .cardCampDoaVol{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        align-content: center;
+        gap: 50px;
+    }
+
+    .cardProjeto{
+        width: 250px;
+    }
+
+    .cardBtns{
+        grid-column: 1 / -1;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btnExcluirCard, .btnEditarDadosCard{
+        width: 200px;
+    }
+}
+
+
+
+@media (max-width: 1000px){
+    .perfilOngContainer{
+        display: flex;
+        top: 0;
+        left: 0;
+    }
+
+    .quadroGeralContainer h1{
+        font-size: 35px;
+    }
+
+    .quadrosGeraisOng{
+        width: 60%;
+    }
+
+    .quadroGeral{
+        width: 100%;
+        justify-content: space-around;
+        gap: 50px;
+        flex-direction: column;
+    }
+
+    .itensArrecadados{
+        border-bottom: 0.5px solid #fff;
+        padding-bottom: 50px;
+    }
+
+    .itensArrecadados h2{
+        font-size: 22px;
+    }
+
+    .itensArrecadados, .porcentagemItensArrecadados h2{
+        font-size: 17px;
+    }
+
+    .graficoVoluntarios, .graficoDoacoes{
+        height: 200x;
+        width: 200px;
+    }
+
+
+    /* CARD DOS PROJETOS */
+    .cardCampDoaVolTitleEPlus h2{
+        font-size: 25px;
+    }
+
+    .btnCardCampDoaVolIconPlus{
+        width: 40px;
+        height: 40px;
+    }
+
+    .btnCardCampDoaVolIconPlus i{
+        font-size: 30px;
+    }
+
+    .cardCampDoaVol{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cardProjeto{
+        width: 220px;
+    }
+
+    .textCard{
+        font-size: 13px;
+    }
+
+    .cardBtns{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* A partir daqui fazer a parte em que o perfil do usuário suma */
+@media(min-width: 851px){
+    .areaMenuHamburguer{
+        display: none !important;
+    }
+
+    .perfilOngContainer{
+        display: flex !important;
+        position: static !important;
+    }
+}
+
+@media(max-width: 850px){
+    .mainHomeOng{
+        flex-direction: column;
+    }
+
+    .perfilOngContainer{
+        display: none;
+    }
+
+    .areaMenuHamburguer{
+        display: flex;
+        width: 90%;
+        height: 50px;
+        margin-top: 20px;
+        justify-content: flex-start;
+        align-self: center;
+    }
+
+    .btnMenuHamburguer{
+        width: 40px;
+        height: 40px;
+        background-color: var(--color-primary);
+        font-size: 20px;
+    }
+
+    .btnMenuHamburguer:hover{
+        border: 0.5px solid var(--color-theme-dark);
+        box-shadow: 0px 0px 3px 1px rgba(0,0,0,1);
+        -webkit-box-shadow: 0px 0px 3px 1px rgba(0,0,0,1);
+        -moz-box-shadow: 0px 0px 3px 1px rgba(0,0,0,1);
+    }
+
+    .conteudoMainContainer{
+        margin-top: 0;
+    }
+
+    /* Gráficos */
+    .quadroGeralContainer h1{
+        font-size: 45px;
+    }
+
+    .quadrosGeraisOng{
+        width: 90%;
+    }
+
+    .quadroGeral{
+        flex-direction: row;
+    }
+
+    .itensArrecadados{
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .itensArrecadados h2{
+        font-size: 25px;
+    }
+
+    .itensArrecadados, .porcentagemItensArrecadados h2{
+        font-size: 20px;
+    }
+
+    .graficoVoluntarios, .graficoDoacoes{
+        height: 230x;
+        width: 230px;
+    }
+
+    .btnExcluirCard, .btnEditarDadosCard{
+        width: 200px;
+        height: 40px;
+    }
+
+
+    /* CARD DOS PROJETOS */
+    .cardCampDoaVolTitleEPlus h2{
+        font-size: 27px;
+    }
+
+    .btnCardCampDoaVolIconPlus{
+        width: 37px;
+        height: 37px;
+    }
+
+    .btnCardCampDoaVolIconPlus i{
+        font-size: 25px;
+    }
+
+    .textCard{
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 600px){
+    /* Menu hamburguer */
+    .btnMenuHamburguer{
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+    }
+
+    /* Gráficos */
+    .quadroGeralContainer h1{
+        font-size: 35px;
+    }
+
+    .quadroGeral{
+        flex-direction: column;
+    }
+
+    .itensArrecadados h2{
+        font-size: 20px;
+    }
+
+    .itensArrecadados, .porcentagemItensArrecadados h2{
+        font-size: 15px;
+    }
+
+    .itensArrecadados{
+        width: 90%;
+        padding-top: 20px;
+        padding-bottom: 50px;
+        border-bottom: 0.5px solid var(--color-theme-clear);
+    }
+
+    .graficoVoluntarios, .graficoDoacoes{
+        height: 250px;
+        width: 250px;
+        padding-bottom: 20px;
+    }
+
+
+    /* CARD DOS PROJETOS */
+    .cardCampDoaVolTitleEPlus h2{
+        font-size: 25px;
+    }
+
+    .btnCardCampDoaVolIconPlus{
+        width: 35px;
+        height: 35px;
+    }
+
+    .btnCardCampDoaVolIconPlus i{
+        font-size: 25px;
+    }
+
+    .cardProjeto{
+        width: 250px;
+    }
+
+    .textCard{
+        width: 90%;
+        margin-left: 10px;
+        font-size: 13px;
+    }
+
+    .btnExcluirCard, .btnEditarDadosCard{
+        width: 200px;
+        height: 45px;
+    }
+}
+
+.classeTeste{
+    z-index: initial;
+    width: 90%;
+    height: 50px;
+    margin-top: 20px;
+    justify-content: flex-start;
+    align-self: center;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
