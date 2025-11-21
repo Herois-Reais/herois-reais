@@ -43,9 +43,12 @@
                 </div> <!-- FIM - Botão excluir perfil -->
 
                 <div class="perfilOngContent"> <!-- Container das informações do perfil -->
-                    <figure class="cardImagemPerfil"> <!-- Imagem de perfil -->
-                        <img class="is-rounded imagemPerfil" src="https://pt.quizur.com/_image?href=https://img.quizur.com/f/img5d4442d31c68a2.24095743.jpg?lastEdited=1564754652&w=1024&h=1024&f=webp" />
-                    </figure> <!-- FIM - Imagem de perfil -->
+                    <label for="imageUpload" class="cardImagemPerfil"> <!-- Imagem de perfil -->
+                        <input type="file" class="inputImg" id="imageUpload" accept="image/*">
+
+                        <img id="imgSubida" src="" class="imagemPerfil" alt="Prévia da Imagem de capa">
+                        <span class="textUpload">Adicionar imagem de perfil</span>
+                    </label> <!-- FIM - Imagem de perfil -->
 
                     <!-- CONTAINER DAS INPUTS COM INFORMAÇÕES DAS ONGs -->
                     <form class="camposInfoPerfilOng">
@@ -198,6 +201,7 @@
         <!-- LINKANDO COM O JS -->
         <script type="module" src="./js/MudancaPerfilUsuarioTema.js"></script>
         <script type="module" src="./js/graficoDinamico.js"></script>
+        <script type="module" src="./js/adicionarDadosOng.js"></script>
     </body>
 </html>
 <!-- Esse  input abre a parte de seus arquivos para poder pegar a foto -->
