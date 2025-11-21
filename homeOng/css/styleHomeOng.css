@@ -69,17 +69,52 @@ body{
     gap: 30px;
 }
 
+/* Imagem de perfil */
 .cardImagemPerfil{
-    width: 50%;
-}
-
-.imagemPerfil{
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    object-fit: fill;
+    background-color: var(--color-auxiliary-primary);
+    border: 3px solid var(--color-action-secondary);
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-theme-clear);
+    text-align: center;
 }
 
+.inputImg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.textUpload{
+    position: absolute;
+    z-index: 1;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+#imgSubida{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+/* Campo dos inputs */
 
 .camposInfoPerfilOng{
     display: flex;

@@ -1,22 +1,28 @@
-import { imagemPreview, imagemUpload, textUpload } from "./elementosHTML.js"
+import { imgPerfilOng, imgPreview, textUpload } from "./elementosHTML.js";
 
-const localStorageKey = 'userUploadedImage'
+const localStorageKey = 'fotoPerfilOng'
 
 function salvarImagem(){
     const imgSalva = localStorage.getItem(localStorageKey)
 
     if(imgSalva) {
-        imagemPreview.src = imgSalva;
-        imagemPreview.style.display = 'block'
+        imgPreview.src = imgSalva;
+        imgPreview.style.display = 'block'
 
         if(textUpload){
             textUpload.style.display = 'none'
         }
+    } else {
+        if(textUpload){
+            textUpload.style.display = 'block'
+        }
+
+        imgPreview.style.display = 'none'
     }
 }
 
 
-imagemUpload.addEventListener('change', function(event){
+imgPerfilOng.addEventListener('change', function(event){
     const arquivo = event.target.files[0]
 
     if(arquivo){
@@ -25,8 +31,8 @@ imagemUpload.addEventListener('change', function(event){
         reader.onload = function(e){
             const base64Image = e.target.result
 
-            imagemPreview.src = base64Image
-            imagemPreview.style.display = 'block'
+            imgPreview.src = base64Image
+            imgPreview.style.display = 'block'
 
             if(textUpload){
                 textUpload.style.display = 'none'

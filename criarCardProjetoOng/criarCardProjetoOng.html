@@ -41,9 +41,12 @@
 
                     <!-- CAMPO PARA PEGAR A IMAGEM E COLOCAR A DESCRIÇÃO -->
                     <div class="card cardImgDescricao">
-                        <div class="cardImg">
+                        <label for="imageUpload" class="cardImg">
                             <input type="file" class="inputImg" id="imageUpload" accept="image/*">
-                        </div>
+                            
+                            <img id="imgSubida" src="" alt="Prévia da Imagem de capa">
+                            <span class="textUpload">Adicionar imagem de capa</span>
+                        </label>
 
                         <div class="cardDescricao">
                             <textarea name="cardTextDescricao" id="cardTextDescricao" class="cardTextDescricao"
@@ -52,50 +55,64 @@
                     </div> <!-- FIM - CAMPO PARA PEGAR A IMAGEM E COLOCAR A DESCRIÇÃO -->
 
                     <!-- CAMPO DAS INPUTS -->
-                    <div class="card cardForm">
-                        <form action="" class="card cardInputs">
-                            <input type="text" class="input inputs" placeholder="Título:">
-                            <input type="date" class="input inputs" placeholder="Data:">
-                            <input type="text" class="input inputs" placeholder="Duração:">
-                            <input type="text" class="input inputs" placeholder="Tempo para descanso:">
-                            <input type="text" class="input inputs" placeholder="Quantidade de voluntários:">
+                    
+                    <form action="" class="card cardForm">
+                        <div class="card cardInputs">
+                            <label class="labelInput" for="inputTitulo">
+                                <span class="textInput">Título: </span>
+                                <input type="text" class="input inputs" id="inputTitulo" required>
+                            </label>
+                            
+                            <label for="inputData" class="labelInput">
+                                <span class="textInput">Data: </span>
+                                <input type="date" class="input inputs" id="inputData" required>
+                            </label>
+                            
+                            <label for="inputDuracao" class="labelInput">
+                                <span class="textInput">Duração:</span>
+                                <input type="text" class="input inputs" placeholder="Ex.: 5h, 2 dias, 3 sábados" id="inputDuracao" required>
+                            </label>
+                            
+                            <label for="inputTempoDescanso" class="labelInput">
+                                <span class="textInput">Tempo para descanso:</span>
+                                <input type="text" class="input inputs" placeholder="Ex.: 30min, 1h" id="inputTempoDescanso" required>
+                            </label>
+                            
+                            <label for="inputQtdVoluntarios" class="labelInput">
+                                <span class="textInput">Quantidade de voluntários: </span>
+                                <input type="text" class="input inputs" placeholder="Ex.: 10, 30" id="inputQtdVoluntarios" required>
+                            </label>
+                            
+                            <label for="inputTipoDoacao" class="labelInput">
+                                <span class="textInput">Tipo de doação: </span>
+                                <input type="text" class="input inputs" placeholder="Ex.: Tempo, Brinquedos, Roupas" id="inputTipoDoacao" required>
+                            </label>
 
-                            <!-- SELEÇÃO DO TIPO DE DOAÇÃO DO CARD -->
-                            <select name="tipoDoacao" id="tipoDoacao" class="inputs selectCard">
-                                <option value=""></option>
-                                <option value="tempo">Tempo</option>
-                                <option value="roupa">Roupa</option>
-                                <option value="calcado">Calçado</option>
-                                <option value="brinquedo">Brinquedos</option>
-                                <option value="materiaisReciclaveis">Materiais Reciclaveís</option>
-                                <option value="alimentos">Alimentos</option>
-                            </select> <!-- FIM - SELEÇÃO DO TIPO DE DOAÇÃO DO CARD -->
+                            <label for="inputQtdItensDoados" class="labelInput">
+                                <span class="textInput">Quantidade dos itens para doarem:</span>
+                                <input type="text" class="input inputs" placeholder="Ex.: 10 bonecas, somente o tempo de serviço" id="inputQtdItensDoados" required>
+                            </label>
+                            
+                            <label for="inputBeneficios" class="labelInput">
+                                <span class="textInput">Benefícios para os doares: </span>
+                                <input type="text" class="input inputs" placeholder="Ex.: Certificado, Brindes, Curso exclusivo" id="inputBeneficios" required>
+                            </label>
 
-                            <input type="text" class="input inputs" placeholder="Quantidade de itens:">
+                        </div> <!-- FIM - CAMPO DAS INPUTS -->
 
-                            <!-- SELEÇÃO DOS BENEFÍCIOS DA AÇÃO DO CARD -->
-                            <select name="beneficiosAcao" id="beneficiosAcao" class="inputs selectCard">
-                                <option value=""></option>
-                                <optgroup label="Certificado:">
-                                    <option value="certificadoParticipacao">Participação</option>
-                                    <option value="certificadoHorasComplemtares">Horas complementares</option>
-                                    <option value="certificadoVoluntariado">Voluntariado</option>
-                                </optgroup>
-                                <option value="descontoParceiro">Desconto em produtos de empresa parceira</option>
-                                <option value="cursoExclusivo">Acesso a curso exclusivo</option>
-                                <option value="brindeExclusivo">Brinde exclusivo da ONG</option>
-                                <option value="semBeneficios">No momento não temos</option>
-                            </select> <!-- FIM - SELEÇÃO DOS BENEFÍCIOS DA AÇÃO DO CARD -->
-                        </form>
-                    </div> <!-- FIM - CAMPO DAS INPUTS -->
+                        <button type="submit" id="btnCriarCard" class="button is-medium btnCriarCard">Criar Card</button>
+                    </form>
+                    
 
 
 
                 </div> <!-- FIM - CONTAINER PARA PEGAR AS INFORMAÇÕES DO CARD -->
 
-                <button type="submit" class="button is-medium btnCriarCard">Criar Card</button>
+                
 
             </main> <!-- FIM - CARD PARA PODER CRIAR O CARD DE PROJETO DA ONG -->
         </div>
+
+        <script type="module" src="./js/scriptCriarCardProjetoOng.js"></script>
     </body>
 </html>
