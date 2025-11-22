@@ -28,5 +28,6 @@ export{
     inputTempoDescanso,
     inputTipoDoacao,
     inputBeneficiosDoadores,
-    textDescricao
+    textDescricao,
+    botaoCriarCard
 }

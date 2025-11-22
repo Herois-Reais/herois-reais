@@ -1,70 +1,45 @@
-/* IMPORTANDO O  */
+/* IMPORTANDO O ESTILO PRINCIPAL DESTA PÁGINA */
 @import './estiloCriarCardProjetoOng.css';
+
 
 @media(max-width: 1450px){
     /* Inputs */
+    .labelInput{
+        width: 350px;
+    }
+    .inputs{
+        width: 350px;
+        height: 45px;
+    }
+}
+
+
+@media(max-width: 1330px){
+    /* Inputs */
+    .labelInput{
+        width: 300px;
+    }
     .inputs{
         width: 300px;
         height: 40px;
     }
-}
-
-@media(max-width: 1330px){
-    /* BOTÃO DE VOLTAR E O TÍTULO */
-    header h2{
-        font-size: 25px;
-    }
-
-    .btnVoltarHomeOng{
-        width: 40px;
-        height: 40px;
-    }
-
-    .btnVoltarHomeOng i{
-        font-size: 25px;
-    }
-
 
     /* CARD PARA PODER CRIAR O CARD DE PROJETO DA ONG */
     .cardContainer{
         gap: 30px;
     }
 
-    /* Parte da imagem e descrição */
-    .cardImgDescricao{
-        gap: 30px;
-    }
-
-    .cardTextDescricao{
-        width: 270px;
-        height: 270px;
-    }
-
-
-    /* Parte das inputs */
-    .cardInputs{
-        width: 80%;
-        gap: 20px;
-    }
-
-    .inputs{
-        width: 250px;
-        height: 35px;
-    }
-
-
     /* Parte do botão criar */
     .btnCriarCard{
         width: 170px;
         height: 50px;
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
-@media (max-width: 1130px){
+@media(max-width: 1220px){
     /* BOTÃO DE VOLTAR E O TÍTULO */
     header{
-        width: 90%;
         gap: 230px;
     }
 
@@ -81,123 +56,116 @@
         font-size: 25px;
     }
 
-
-    /* CARD PARA PODER CRIAR O CARD DE PROJETO DA ONG */
-    .mainContent{
-        width: 90%;
-    }
-
-    .cardContainer{
-        width: 70%;
-        gap: 0;
-    }
-
-    /* Parte do botão criar */
-    .btnCriarCard{
-        width: 150px;
-        height: 40px;
-        font-size: 17px;
-    }
-}
-
-@media(max-width: 1030px){
-    /* BOTÃO DE VOLTAR E O TÍTULO */
-    header{
-        width: 70%;
-        gap: 90px;
-    }
-
-    header h2{
-        font-size: 23px;
-    }
-
-    .btnVoltarHomeOng{
-        width: 38px;
-        height: 38px;
-    }
-
-    .btnVoltarHomeOng i{
-        font-size: 23px;
-    }
-
-
-    /* CARD PARA PODER CRIAR O CARD DE PROJETO DA ONG */
-    .mainContent{
-        width: 70%;
-    }
-
-    .cardContainer{
-        width: 100%;
-        flex-direction: column-reverse;
-        gap: 50px;
-    }
-
-
     /* Parte da imagem e descrição */
+    .cardImgDescricao{
+        padding: 5px;
+    }
+
+    /* Card da imagaem */
+    .cardImg{
+        height: 120px;
+    }
+
     .cardTextDescricao{
-        width: 500px;
+        width: 250px;
+        height: 200px;
     }
-
-
-    /* Parte do botão criar */
-    .btnCriarCard{
-        width: 150px;
-        height: 40px;
-        font-size: 17px;
-    }
-
 
     /* Parte das inputs */
     .cardInputs{
-        width: 100%;
-        row-gap: 30px;
+        column-gap: 30px;
+    }
+
+    .labelInput{
+        width: 300px;
     }
 
     .inputs{
         width: 300px;
+    }
+
+    /* Parte do botão criar */
+    .btnCriarCard{
+        width: 145px;
         height: 40px;
+        font-size: 16px;
     }
 }
 
-@media(max-width: 950px){
-    /* BOTÃO DE VOLTAR E O TÍTULO */
-    header{
-        gap: 100px;
-    }
-
-    header h2{
-        font-size: 20px;
-    }
-
-    .btnVoltarHomeOng{
-        width: 35px;
-        height: 35px;
-    }
-
-    /* Parte da imagem e descrição */
-    .cardTextDescricao{
-        width: 400px;
+@media(max-width: 1130px){
+    /* CARD PARA PODER CRIAR O CARD DE PROJETO DA ONG */
+    .cardContainer{
+        column-gap: 20px;
+        padding: 0 20px;
     }
 
     /* Parte das inputs */
     .cardInputs{
-        width: 100%;
-        row-gap: 30px;
+        column-gap: 10px;
+    }
+
+    .labelInput{
+        width: 270px;
     }
 
     .inputs{
-        width: 250px;
+        width: 270px;
     }
 }
 
-@media(max-width: 840px){
+@media (max-width: 1000px){
     /* BOTÃO DE VOLTAR E O TÍTULO */
     header{
-        gap: 50px;
+        gap: 160px;
+    }
+
+    /* CARD PARA PODER CRIAR O CARD DE PROJETO DA ONG */
+    .cardContainer{
+        align-items: flex-start;
+        margin-top: 50px;
+    }
+
+    /* Parte da imagem e descrição */
+    .cardImgDescricao{
+        padding: 5px;
+    }
+
+    /* Card da imagaem */
+    .cardImg{
+        height: 140px;
+        width: 80%;
+    }
+
+    .cardTextDescricao{
+        width: 270px;
+        height: 240px;
+    }
+
+    /* Parte das inputs */
+    .cardInputs{
+        grid-template-columns: auto;
+        column-gap: 0;
+        row-gap: 20px;
+    }
+
+    .labelInput{
+        width: 400px;
+    }
+
+    .inputs{
+        width: 400px;
+    }
+}
+
+
+@media (max-width: 870px){
+    /* BOTÃO DE VOLTAR E O TÍTULO */
+    header{
+        gap: 90px;
     }
 
     header h2{
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .btnVoltarHomeOng{
@@ -205,31 +173,53 @@
         height: 37px;
     }
 
+    .btnVoltarHomeOng i{
+        font-size: 25px;
+    }
+
+    /* CARD PARA PODER CRIAR O CARD DE PROJETO DA ONG */
+    .cardContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Card da imagem */
+    .cardImg{
+        height: 150px;
+        width: 55%;
+    }
+
+    .cardTextDescricao{
+        width: 500px;
+        height: 240px;
+    }
+
     /* Parte das inputs */
-    .cardInputs{
-        grid-template-columns: auto;
+    .labelInput{
+        width: 500px;
     }
 
     .inputs{
-        width: 450px;
+        width: 500px;
         height: 50px;
     }
 
-    /* Parte da imagem e descrição */
-    .cardTextDescricao{
-        width: 450px;
+    /* Parte do botão criar */
+    .btnCriarCard{
+        width: 160px;
+        height: 60px;
+        font-size: 18px;
     }
 }
 
-@media(max-width: 720px){
+@media (max-width: 670px){
     /* BOTÃO DE VOLTAR E O TÍTULO */
     header{
-        width: 80%;
         gap: 50px;
     }
 
     header h2{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .btnVoltarHomeOng{
@@ -237,115 +227,109 @@
         height: 35px;
     }
 
-    .btnVoltarHomeOng i{
-        font-size: 25px;
+    /* Card da imagem */
+    .cardImg{
+        height: 115px;
+        width: 55%;
     }
 
-
-    /* CARD PARA PODER CRIAR O CARD DE PROJETO DA ONG */
-    .mainContent{
-        width: 80%;
-    }
-
-    .cardContainer{
-        width: 100%;
-    }
-}
-
-@media(max-width: 630px){
-    /* BOTÃO DE VOLTAR E O TÍTULO */
-    header h2{
-        font-size: 18px;
-    }
-
-    /* Parte das inputs */
-    .inputs{
-        width: 400px;
-        height: 45px;
-    }
-
-    /* Parte da imagem e descrição */
     .cardTextDescricao{
-        width: 400px;
-    }
-}
-
-@media(max-width: 560px){
-    /* BOTÃO DE VOLTAR E O TÍTULO */
-    header{
-        gap: 30px;
-    }
-
-    header h2{
-        font-size: 17px;
+        width: 300px;
+        height: 240px;
     }
 
     /* Parte das inputs */
+    .labelInput{
+        width: 400px;
+    }
+
     .inputs{
-        width: 350px;
+        width: 400px;
         height: 40px;
     }
 
-    /* Parte da imagem e descrição */
-    .cardTextDescricao{
-        width: 350px;
+    /* Parte do botão criar */
+    .btnCriarCard{
+        width: 120px;
+        height: 45px;
+        font-size: 16px;
     }
 }
 
+@media(max-width: 480px){
+    /* BOTÃO DE VOLTAR E O TÍTULO */
+    header{
+        gap: 20px;
+    }
 
-@media(max-width: 500px){
     header h2{
         font-size: 16px;
     }
 
+    .btnVoltarHomeOng{
+        width: 33px;
+        height: 33px;
+    }
+
+    /* Card da imagem */
+    .cardImg{
+        height: 100px;
+        width: 55%;
+    }
+
+    .cardTextDescricao{
+        width: 300px;
+        height: 240px;
+    }
+
     /* Parte das inputs */
+    .labelInput{
+        width: 300px;
+    }
+
     .inputs{
         width: 300px;
         height: 40px;
     }
 
-    /* Parte da imagem e descrição */
-    .cardTextDescricao{
-        width: 300px;
+    /* Parte do botão criar */
+    .btnCriarCard{
+        width: 110px;
+        height: 40px;
+        font-size: 14px;
     }
 }
 
-@media(max-width: 430px){
-   /* Parte das inputs */
-    .inputs{
-        width: 250px;
-        height: 35px;
-    }
 
-    /* Parte da imagem e descrição */
-    .cardTextDescricao{
-        width: 250px;
-    }
-}
-
-@media(max-width: 370px){
+@media(max-width: 380px){
     /* BOTÃO DE VOLTAR E O TÍTULO */
-    header h2{
-        font-size: 15px;
+    header{
+        gap: 40px;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 80%;
     }
 
-    .btnVoltarHomeOng{
-        width: 30px;
-        height: 30px;
+    /* Card da imagem */
+    .cardImg{
+        height: 100px;
+        width: 60%;
+        font-size: 14px;
     }
 
-    .btnVoltarHomeOng i{
-        font-size: 20px;
+    .cardTextDescricao{
+        width: 250px;
+        height: 230px;
     }
 
     /* Parte das inputs */
+    .labelInput{
+        width: 250px;
+        font-size: 14px;
+    }
+
     .inputs{
-        width: 200px;
+        width: 250px;
     }
 
-    /* Parte da imagem e descrição */
-    .cardTextDescricao{
-        width: 200px;
-    }
 }
-

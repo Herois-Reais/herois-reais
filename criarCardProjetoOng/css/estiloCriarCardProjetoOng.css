@@ -7,8 +7,11 @@ body, html{
 
 .containerAll{
     width: 100%;
-    padding-bottom: 55px;
     background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ------------------------------------- BOTÃO DE VOLTAR E O TÍTULO */
@@ -16,11 +19,11 @@ header{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 85%;
+    width: 90%;
     height: auto;
     justify-self: center;
     padding-top: 50px;
-    gap: 300px;
+    gap: 270px;
 }
 
 header h2{
@@ -54,27 +57,24 @@ header h2{
 /* ------------------------------------- CARD PARA PODER CRIAR O CARD DE PROJETO DA ONG */
 .mainContent{
     background-color: var(--color-secondary);
-    width: 85%;
-    height: auto;
-    justify-self: center;
+    width: 90%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin: 50px 0;
 }
 
 
 .cardContainer{
-    height: auto;
     width: 95%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    margin-top: 30px;
     background-color: transparent;
     box-shadow: none;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
 }
 
 
@@ -85,9 +85,9 @@ header h2{
     justify-content: center;
     align-items: center;
     gap: 50px;
-    /* background-color: purple; */
     background-color: transparent;
     box-shadow: none;
+    padding: 10px;
 }
 
 /* Card da imagaem */
@@ -159,30 +159,34 @@ header h2{
     width: 100%;
     border: none;
     box-shadow: none;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
 
 .cardInputs{
-    width: 100%;
+    width: 100% !important;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background-color: transparent;
-    row-gap: 30px;
     border: none;
     box-shadow: none;
     padding: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .labelInput{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 350px;
+    justify-self: center;
+    align-self: center;
+    width: 400px;
     font-weight: bold;
     font-size: 16px;
-    gap: 5px;
+    padding: 10px;
+    gap: 10px;
 }
 
 .textInput{
@@ -192,8 +196,8 @@ header h2{
 .inputs{
     align-self: center;
     justify-self: center;
-    width: 350px;
-    height: 40px;
+    width: 400px;
+    height: 50px;
     background-color: var(--color-theme-clear);
     color: var(--color-primary);
     border: none;
@@ -215,6 +219,9 @@ header h2{
     background-color: var(--color-action-secondary);
     border: none;
     margin-bottom: 30px;
+    display: flex;
+    align-self: center;
+    justify-self: center;
 }
 
 .btnCriarCard:hover{
