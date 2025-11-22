@@ -1,21 +1,8 @@
-import { imagemPreview, imagemUpload, textUpload } from "./elementosHTML.js"
+import { botaoCriarCard, imagemPreview, imagemUpload, inputBeneficiosDoadores, inputData, inputDuracao, inputQtdItensDoarem, inputQtdVoluntarios, inputTempoDescanso, inputTipoDoacao, inputTitulo, textDescricao, textUpload } from "./elementosHTML.js"
 
-const localStorageKey = 'userUploadedImage'
+const localStorageKey = 'listaProjetosOng'
 
-function salvarImagem(){
-    const imgSalva = localStorage.getItem(localStorageKey)
-
-    if(imgSalva) {
-        imagemPreview.src = imgSalva;
-        imagemPreview.style.display = 'block'
-
-        if(textUpload){
-            textUpload.style.display = 'none'
-        }
-    }
-}
-
-
+// SALVA A IMAGEM NO LOCALSTORAGE
 imagemUpload.addEventListener('change', function(event){
     const arquivo = event.target.files[0]
 
@@ -32,12 +19,70 @@ imagemUpload.addEventListener('change', function(event){
                 textUpload.style.display = 'none'
             }
 
-            localStorage.setItem(localStorageKey, base64Image)
-            console.log("Imagem Salva!")
+            console.log("Prévia carregada!")
         }
 
         reader.readAsDataURL(arquivo)
     }
 })
 
-document.addEventListener('DOMContentLoaded', salvarImagem)
+
+
+// FUNÇÃO PARA COLOCAR AS INFORMAÇÕES DAS INPUTS NO LOCAL STORAGE
+function salvarInformacoesCardLocalStorage(event){
+    event.preventDefault()
+
+    const form = document.querySelector('.cardForm')
+    const imagemCapa = imagemPreview.src
+
+    if(!imagemCapa.startsWith('data:image')){
+        alert("Adicione uma imagem para o projeto.")
+        return
+    }
+
+    if(textDescricao.value.trim() === ''){
+        alert("Adicione uma descrição.")
+        return
+    }
+
+    if(!form.checkVisibility()){
+        alert("Preencha todos os campos.")
+        return
+    }
+
+    const novoCard = {
+        id: Date.now(),
+        titulo: inputTitulo.value,
+        data: inputData.value,
+        duracao: inputDuracao.value,
+        tempoDescanso: inputTempoDescanso.value,
+        qtdVoluntarios: inputQtdVoluntarios.value,
+        tipoDoacao: inputTipoDoacao.value,
+        qtdItensDoarem: inputQtdItensDoarem.value,
+        beneficios: inputBeneficiosDoadores.value,
+        descricao: textDescricao.value,
+        imagem: imagemCapa
+    }
+
+    const cardsExistentes = JSON.parse(localStorage.getItem(localStorageKey)) || []
+
+    cardsExistentes.push(novoCard)
+
+    // Atualizando a lista:
+    localStorage.setItem(localStorageKey, JSON.stringify(cardsExistentes))
+
+    if(imagemPreview){
+        imagemPreview.src = ''
+        imagemPreview.style.display = 'none'
+    }
+    if(textUpload){
+        textUpload.style.display = 'block'
+    }
+    
+    form.reset()
+    alert("Card cadastrado com sucesso!")
+    console.log('Novo card Cadastado!');
+    
+}
+
+botaoCriarCard.addEventListener('click', salvarInformacoesCardLocalStorage)

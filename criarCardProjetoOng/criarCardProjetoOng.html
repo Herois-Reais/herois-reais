@@ -42,7 +42,7 @@
                     <!-- CAMPO PARA PEGAR A IMAGEM E COLOCAR A DESCRIÇÃO -->
                     <div class="card cardImgDescricao">
                         <label for="imageUpload" class="cardImg">
-                            <input type="file" class="inputImg" id="imageUpload" accept="image/*">
+                            <input type="file" class="inputImg" id="imageUpload" accept="image/*" required>
                             
                             <img id="imgSubida" src="" alt="Prévia da Imagem de capa">
                             <span class="textUpload">Adicionar imagem de capa</span>
@@ -50,7 +50,7 @@
 
                         <div class="cardDescricao">
                             <textarea name="cardTextDescricao" id="cardTextDescricao" class="cardTextDescricao"
-                                placeholder="Breve descrição:"></textarea>
+                                placeholder="Breve descrição:" required></textarea>
                         </div>
                     </div> <!-- FIM - CAMPO PARA PEGAR A IMAGEM E COLOCAR A DESCRIÇÃO -->
 
@@ -60,7 +60,7 @@
                         <div class="card cardInputs">
                             <label class="labelInput" for="inputTitulo">
                                 <span class="textInput">Título: </span>
-                                <input type="text" class="input inputs" id="inputTitulo" required>
+                                <input type="text" class="input inputs" placeholder="Ex.: Mãos da amizade" id="inputTitulo" required>
                             </label>
                             
                             <label for="inputData" class="labelInput">
