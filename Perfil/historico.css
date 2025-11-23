@@ -1,0 +1,206 @@
+:root{
+  --bg-dark: #1A1616;
+  --nav-purple: #462969;
+  --green: #2E662E;
+  --accent-green: #88D775;
+  --purple: #a65ad0;
+  --orange:#be5a2a;
+  --blue:#3b4db5;
+  --nav-purple: #462969;        
+  --accent-green: #88D775;  
+  --card-bg: #0b3b2b;       
+  --muted: #FFFFFF;
+  --purple: #a65ad0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+/* ===== Overlay (fundo esfumado) ===== */
+.modal-overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(3px);
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  
+}
+.modal-overlay{
+  display:flex 
+}
+
+
+
+
+/* ===== Corpo do Popup ===== */
+.modal-content{
+  background:var(--bg-dark);
+  border:3px solid var(--purple);
+  border-radius:20px;
+  width:90%;
+  max-width:1100px;
+  padding:25px;
+  position:relative;
+  animation:fadeIn .25s ease;
+}
+
+/* Botão de fechar */
+.close-modal img{
+  width: 20px;
+  height:20px;
+}
+.close-modal{
+  position:absolute;
+  top:15px;
+  right:15px;
+  font-size:24px;
+  padding:5px 10px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  background:#c00;
+  color:white;
+}
+
+/* Layout interno */
+.historico-wrapper{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:30px;
+}
+
+/* ===== Esquerda ===== */
+
+.left-panel{
+  background:var(--blue);
+  padding:20px;
+  border-radius:15px;
+  color:white;
+}
+
+.left-panel h1{
+  text-align:center;
+  margin:0;
+}
+
+.table{
+  display:flex;
+  gap:12px;
+  margin-top:20px;
+  text-align: center;
+  
+}
+
+.col{
+  background:#1C572C;
+  padding:10px;
+  flex:1;
+  border-radius:8px;
+}
+
+.col h3{
+  background:var(--orange);
+  padding:6px;
+  border-radius:6px;
+  font-size:16px;
+  margin-bottom:8px;
+}
+
+/* ===== Direita ===== */
+
+.right-panel{
+  background:#111;
+  padding:20px;
+  border-radius:15px;
+  border:2px solid var(--green);
+  text-align:center;
+  color:var(--green);
+}
+
+.profile-pic{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:12px;
+}
+
+.points{
+  font-size:20px;
+  margin-bottom:20px;
+}
+
+.profile-form input{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border-radius:10px;
+  border:2px solid var(--green);
+  background:transparent;
+  color:var(--green);
+}
+
+.btn-save{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:var(--green);
+  color:black;
+  font-weight:bold;
+  cursor:pointer;
+  margin-top:10px;
+}
+.confirm-overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(5px);
+  justify-content:center;
+  align-items:center;
+  z-index:10000000000;
+}
+
+.confirm-box{
+  background:var(--bg-dark);
+  padding:30px;
+  border-radius:15px;
+  width:90%;
+  max-width:400px;
+  text-align:center;
+  border:2px solid var(--purple);
+  color: white;
+}
+
+.confirm-buttons{
+  display:flex;
+  gap:15px;
+  margin-top:20px;
+  justify-content:center;
+}
+
+.confirm-buttons button{
+  padding:10px 20px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+#confirmYes{
+  background:var(--orange);
+  color:white;
+}
+
+#confirmNo{
+  background:#444;
+  color:white;
+}
+
+@keyframes fadeIn{
+  from{opacity:0; transform:scale(.93);}
+  to{opacity:1; transform:scale(1);}
+}

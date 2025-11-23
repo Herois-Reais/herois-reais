@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="historico.css">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9716f3df53.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="modal-overlay" id="modalHistorico">
+
+  <div class="modal-content">
+
+    <button class="close-modal"><img src="/imgs/Group.png" alt=""></button>
+
+    <div class="historico-wrapper">
+
+      <!-- Lado Esquerdo -->
+      <div class="left-panel">
+        <h1>Histórico de boas ações</h1>
+
+        <div class="table">
+          <div class="col">
+            <h3>Data</h3>
+            <p>28/10/2025</p>
+          </div>
+
+          <div class="col">
+            <h3>Ação realizada</h3>
+            <p>Participou de uma ação voluntária como organizador em um evento da ONG X sobre a festa para idosos</p>
+          </div>
+
+          <div class="col">
+            <h3>ONG ajudada</h3>
+            <p>ONG X</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lado Direito -->
+      <div class="right-panel">
+        <img class="profile-pic" src="/imgs/perfil.png" alt="Foto do usuário">
+
+        <p class="points">Pontos totais: 100</p>
+
+        <form class="profile-form">
+          <input type="text" placeholder="Ametista Faceta-5 Corte-8XM">
+          <input type="email" placeholder="ametista@gmail.com">
+          <input type="password" placeholder="***********">
+          <button class="btn-save">Salvar alteração</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="confirm-overlay" id="confirmOverlay">
+  <div class="confirm-box">
+      <p>Deseja realmente deletar a conta?</p>
+      <div class="confirm-buttons">
+          <button id="confirmYes">Sim</button>
+          <button id="confirmNo">Não</button>
+      </div>
+  </div>
+</div>
+
+<script src="historico.js"></script>
+</body>
+</html>

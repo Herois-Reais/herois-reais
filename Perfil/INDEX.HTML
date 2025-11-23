@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Heróis Reais — Voluntariado</title>
+
+  <!-- Fonte: monoespaçada e sans para títulos -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9716f3df53.js" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+  <div class="header-inner">
+
+    <!-- LINHA 1 -->
+    <div class="header-top">
+      <div class="brand">
+        <img src="/img/isologoHeroisReais3D.png" alt="Heróis Reais" class="logo" />
+        <span class="brand-name">Heróis Reais</span>
+      </div>
+
+     
+        <div class="search">
+           <img src="/imgs/material-symbols_search-rounded.png" alt=""><input type="search" placeholder= "Buscar..." />
+        </div>
+      
+      <div class="tema">
+        <img src="/imgs/tema.png" alt="">
+      </div>
+      <div class="language">
+        <img src="/imgs/material-symbols_language.png" alt="">
+      </div>
+
+      <div class="perfil">
+        <button class="profile-btn" id="openHistoricoBtn" aria-label="perfil"><img src="/imgs/perfil.png" alt=""></button>
+     
+      </div>
+    </div>
+
+    
+    
+    <!-- LINHA 2 -->
+    <nav class="main-nav">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#sobre" class="nav-link">Sobre</a>
+      <a href="#campanhas" class="nav-link">Campanhas</a>
+      <a href="#voluntariado" class="nav-link">Voluntariado</a>
+      <a href="#" class="nav-link">Cursos Exclusivos</a>
+      <a href="#" class="nav-link">Parceiros</a>
+      <a href="#" class="nav-link">FAQ</a>
+      <a href="#contato" class="nav-link">Contato</a>
+    </nav>
+
+  </div>
+</header>
+
+
+  <!-- HERO / INÍCIO DA PÁGINA -->
+  <main id="home">
+    <section class="hero">
+      <h1 class="hero-title">ONG <span class="highlight">RECOMEÇANDO</span></h1>
+      <div class="hero-grid">
+
+        <!-- cartão com imagem e descrição (lado esquerdo do screenshot) -->
+        <article class="card-ong">
+          <div class="card-image">
+            <img src="/imgs/LOGO-ONG-RECOMEÇANDO-4-e1653963140492-2048x993.png" alt="Reciclagem" />
+          </div>
+          <div class="card-body">
+            <h3>ONG RECOMEÇANDO- Reciclando</h3>
+            <p class="date">Data: <strong>30/12/2025</strong></p>
+            <p class="card-text">Descrição breve da campanha e informações adicionais.</p>
+          </div>
+        </article>
+
+        <!-- painel com informações e formulário de seleção (lado direito) -->
+        <aside class="volunteer-panel" id="voluntariado">
+          <ul class="info-list">
+            <li><strong>Horário:</strong> 10h - 19h</li>
+            <li><strong>Tempo de descanso:</strong> 2h</li>
+            <li><strong>Quantidade de pontos:</strong> 30</li>
+          </ul>
+
+          <form id="volunteerForm" class="role-form">
+            <h4>Escolha a(s) função(ões) que deseja exercer:</h4>
+
+            <label class="checkbox-row">
+              <input type="checkbox" name="roles" value="separacao" /> Fazer a separação dos materiais
+            </label>
+
+            <label class="checkbox-row">
+              <input type="checkbox" name="roles" value="contabilidade" /> Fazer a contabilização dos materiais
+            </label>
+
+            <label class="checkbox-row">
+              <input type="checkbox" name="roles" value="transformacao" /> Transformar os materiais em brinquedos
+            </label>
+
+            <button type="submit" class="btn-primary">Enviar resposta</button>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    
+
+    <!-- CONTATO: imagem + formulário (rodapé alto do print) -->
+    <section id="contato" class="contact-section">
+      <h2 class="center-title">Entre em contato conosco!</h2>
+
+      <div class="contact-grid container">
+        <div class="contact-illustration">
+          <img src="/imgs/img-contato.png" alt="Pessoas conversando" />
+        </div>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <label>
+            Nome:
+            <input type="text" id="nome" name="nome" required />
+          </label>
+
+          <label>
+            E-mail:
+            <input type="email" id="email" name="email" required />
+          </label>
+
+          <label>
+            Mensagem:
+            <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+          </label>
+
+          <button type="submit" class="btn-primary small">Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div class="footer-section footer-brand">
+      <img src="/img/isologoHeroisReais3D.png" alt="Heróis Reais" class="logo-sm" />
+      <span>Heróis Reais</span>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="footer-section">
+      © Todos os direitos Reservados
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="footer-section footer-social">
+      <i class="fa-brands fa-square-linkedin"></i>
+      <i class="fa-brands fa-google"></i>
+      <i class="fa-brands fa-instagram"></i>
+    </div>
+
+  </div>
+</footer>
+
+<script src="script.js"></script>
