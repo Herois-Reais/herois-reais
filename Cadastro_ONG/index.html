@@ -18,13 +18,13 @@
             <img src="img/isologoHeroisReais3D.png" alt="">
         </div>
         <div class="form">
-            <form action="#">
+            <form action="#" id="formCadastroOng">
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastre-se</h1>
                     </div>
                     <div class="login-button">
-                        <button><a href="#">Possui uma conta? Entrar</a></button>
+                        <button><a href="../loginOng/index.html">Possui uma conta? Entrar</a></button>
                     </div>
                 </div>
 
@@ -36,7 +36,7 @@
 
                     <div class="input-box">
                         <label for="lastname">CNPJ</label>
-                        <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
+                        <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required maxlength="14" minlength="14">
                     </div>
                     <div class="input-box">
                         <label for="email">E-mail</label>
@@ -45,28 +45,30 @@
 
                     <div class="input-box">
                         <label for="number">Telefone</label>
-                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
+                        <input id="number" type="tel" name="number" placeholder="(xx) xxxxx-xxxx" required maxlength="11">
                     </div>
 
                     <div class="input-box">
                         <label for="password">Senha</label>
-                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required maxlength="8">
                     </div>
 
 
                     <div class="input-box">
                         <label for="confirmPassword">Confirme sua Senha</label>
-                        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" required>
+                        <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" required maxlength="8">
                     </div>
 
              
 
                 <div class="continue-button">
-                    <button><a href="#">Continuar</a> </button>
+                    <button id="btnCriarContaOng" type="submit">Continuar</button>
                 </div>
             </form>
         </div>
     </div>
+
+    <script type="module" src="./js/cadastroOng.js"></script>
 </body>
 
 </html>
