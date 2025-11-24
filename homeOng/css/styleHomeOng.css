@@ -327,9 +327,27 @@ body{
 
 .cardProjeto{
     width: 400px;
+    height: auto;
     background-color: var(--color-theme-clear);
     color: var(--color-theme-dark);
     margin-bottom: 0 !important;
+    border: 3px solid var(--color-action-secondary);
+}
+
+.card-image{
+    width: 100%;
+    height: auto;
+}
+
+.imgCapaCard{
+    width: 100%;
+    object-fit: cover;
+    max-height: none;
+    border-bottom: 3px solid var(--color-action-secondary);
+}
+
+.content{
+    overflow-wrap: break-word;
 }
 
 .textCard{
@@ -356,3 +374,7 @@ body{
     border: none;
 }
 
+hr{
+    background-color: var(--color-theme-clear);
+    margin: 40px 0;
+}

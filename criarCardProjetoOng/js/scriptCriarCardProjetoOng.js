@@ -80,9 +80,10 @@ function salvarInformacoesCardLocalStorage(event){
     }
     
     form.reset()
+    textDescricao.value = ''
     alert("Card cadastrado com sucesso!")
-    console.log('Novo card Cadastado!');
     
+    window.location.href = "../homeOng/homeOng.html"
 }
 
 botaoCriarCard.addEventListener('click', salvarInformacoesCardLocalStorage)
