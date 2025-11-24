@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="./css/styleGeral.css">
+    <title>Herois Reais</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-1">
+            <div class="logo">
+                <img src="./imgs/isologoHeroisReias.png" alt="">
+            </div>
+
+            <div class="barra-pesquisa">
+                <input id="searchPage" type="text" placeholder="Buscar...">
+                <button id="searchBtn" type="button">Pesquisar</button>
+            </div>
+
+
+            <!--BOTAO MODO ESCURO OK-->
+            <input type="checkbox" id="toggle">
+
+            <div class="display">
+                <label for="toggle">
+                    <div class="circle">
+                        <img src="./imgs/tabler_sun-filled.png" alt="" class="sun">
+                        <img src="./imgs/tabler_moon.png" alt="" class="moon">
+                    </div>
+                </label>
+            </div>
+
+
+            <div class="btn-logar">
+                <button class="button btn-login-custom">
+                    Logar
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="navbar-menu">
+        <a class="navbar-item" href="#area-home">Home</a>
+        <a class="navbar-item" href="#area-sobre">Sobre</a>
+        <a class="navbar-item" href="#area-camp">Campanhas</a>
+        <a class="navbar-item" href="#area-voluntarios">Voluntariado</a>
+        <a class="navbar-item" href="#area-cursos">Cursos exclusivos</a>
+        <a class="navbar-item" href="#area-parceiros">Parceiros</a>
+        <a class="navbar-item" href="#area-faq">FAQ</a>
+        <a class="navbar-item" href="#area-contato">Contato</a>
+    </nav>
+
+    <main>
+        <section id="area-home" class="hero is-medium">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns is-vcentered">
+                        <div class="column is-half">
+                            <h1 class="title is-1 has-text-weight-bold">
+                                Olá!
+                            </h1>
+                            <p class="subtitle is-4 my-4">
+                                Faça uma boa ação para quem<br>
+                                precisa.
+                            </p>
+                            <a href="/ongs.html"><button class="button is-primary is-medium">
+                                    Doar
+                                </button></a>
+                        </div>
+                        <div class="column is-half">
+                            <figure class="image">
+                                <img src="./imgs/img-carrossel1.png" alt="Doação">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="area-sobre" class="sobre">
+            <div class="container-sobre">
+                <div class="conteudo-sobre">
+                    <div class="imagem-sobre">
+                        <img src="./imgs/img-sobre.png" alt="Sobre o projeto">
+                    </div>
+
+                    <div class="texto-sobre">
+                        <div class="barra-lateral">
+                            <div class="barra-vertical"></div>
+                            <div class="conteudo-texto">
+                                <h2>Sobre</h2>
+                                <p>
+                                    O Projeto Heróis Reais surgiu com o propósito de servir como ponte entre pessoas que
+                                    querem fazer doações ou atuarem como voluntários em ONGs, mas não sabe como e por
+                                    onde deve fazer e ONGs que estão necessitando de doações ou voluntariados para poder
+                                    seguir com os seus objetivos de poder ajudar e impactar positivamente a vida do
+                                    máximo de número de pessoas possíveis.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="area-camp" class="campanhas">
+            <div class="container-campanha">
+                <h1>Campanhas</h1>
+
+                <div class="columns is-multiline">
+                    <!-- Card 1 -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./imgs/image 11.png" alt="ONG">
+                            </div>
+                            <div class="card-content">
+                                <h3>ONG Y - Bate-papo<br>com que sabe</h3>
+                                <p>Data: 30/12/2025</p>
+                                <br>
+                                <br>
+                                <br>
+                                <button class="button">Saiba Mais</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./imgs/image 12.png" alt="ONG">
+                            </div>
+                            <div class="card-content">
+                                <h3>ONG Y - Bate-papo<br>com que sabe</h3>
+                                <p>Data: 30/12/2025</p>
+                                <br>
+                                <br>
+                                <br>
+                                <button class="button">Saiba Mais</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="column is-4">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./imgs/image 13.png" alt="ONG">
+                            </div>
+                            <div class="card-content">
+                                <h3>ONG Y - Bate-papo<br>com que sabe</h3>
+                                <p>Data: 30/12/2025</p>
+                                <br>
+                                <br>
+                                <br>
+                                <div class="has-text-centered">
+                                    <button class="button">Saiba Mais</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="area-voluntarios" class="voluntarios">
+            <div class="container-voluntarios">
+                <h1>Voluntáriados</h1>
+
+                <p>     Deseja ajudar de outa forma? Pode ser um voluntário(a). Algumas instituições podem até oferecer um certificado!</p>
+
+                <div class="splide" role="group">
+                    <div class="splide__track">
+                        <div class="splide__list">
+
+                            <div class="splide__slide">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="./imgs/image 14.png" alt="ONG">
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">ONG 1</h2>
+                                        <p>A ONG X ajuda jovens a entender os conceitos sobre ética e cidadania</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="splide__slide">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="./imgs/image 14.png" alt="ONG">
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">ONG 2</h2>
+                                        <p>A ONG X ajuda jovens a entender os conceitos sobre ética e cidadania</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="splide__slide">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="./imgs/image 14.png" alt="ONG">
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">ONG 3</h2>
+                                        <p>A ONG X ajuda jovens a entender os conceitos sobre ética e cidadania</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="splide__slide">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="./imgs/image 14.png" alt="ONG">
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">ONG 4</h2>
+                                        <p>A ONG X ajuda jovens a entender os conceitos sobre ética e cidadania</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="splide__slide">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="./imgs/image 14.png" alt="ONG">
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">ONG 5</h2>
+                                        <p>A ONG X ajuda jovens a entender os conceitos sobre ética e cidadania</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="splide__slide">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="./imgs/image 14.png" alt="ONG">
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">ONG 6</h2>
+                                        <p>A ONG X ajuda jovens a entender os conceitos sobre ética e cidadania</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="splide__slide">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="./imgs/image 14.png" alt="ONG">
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="title is-5">ONG 7</h2>
+                                        <p>A ONG X ajuda jovens a entender os conceitos sobre ética e cidadania</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="espaco-laranja">
+            <br>
+            <br>
+            <br>
+        </section>
+
+        <section id="area-cursos" class="cursos-ex">
+            <div class="container-cursos-ex">
+                <h1>Cursos exclusivos</h1>
+                <p>Aquele que prática o bem, merece receber o mesmo. E pe acreditando nisto que algumas de nossas
+                    empresas
+                    e ONGs parceiras disponibilizaram alguns cursos exclusivos para os doadores e voluntários.
+                    Aproveite!
+                </p>
+                <div class="columns is-multiline is-variable is-5">
+
+                    <div class="column is-4">
+                        <div class="card is-equal-height">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="./imgs/image 2.png" alt="ONG">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="title is-5">Comunicação</h2>
+                                <p class="content">Curso que ensinará como ter uma comunicação mais objetiva e nítida.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column is-4">
+                        <div class="card is-equal-height">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="./imgs/image 2.png" alt="ONG">
+                                </figure>
+                            </div>
+                            <div class="card-content" id="desing">
+                                <h2 class="title is-5">Design Thinking</h2>
+                                <p class="content">Curso que ensinará o que é e como funciona o design thinking.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column is-4">
+                        <div class="card is-equal-height">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img src="./imgs/image 2.png" alt="ONG">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="title is-5">Lógica de programação</h2>
+                                <p class="content">Curso que ensinará o que é e como aplicar a lógica de programação.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="area-parcerios" class="parceiros">
+            <div class="container">
+                <h1>Parceiros</h1>
+                <p>Conheça as empresas e ONGs que estão te ajudando a receber um retorno por todas as ações de bondade
+                    que você tem feito.</p>
+
+                <div class="columns is-multiline is-centered">
+                    <!-- Card 1 -->
+                    <div class="column is-3">
+                        <div class="card card-apenas-imagem">
+                            <div class="card-image">
+                                <figure class="image is-1by1">
+                                    <img src="./imgs/image 7.png" alt="Parceiro 1">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="column is-3">
+                        <div class="card card-apenas-imagem">
+                            <div class="card-image">
+                                <figure class="image is-1by1">
+                                    <img src="./imgs/image 7.png" alt="Parceiro 2">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="column is-3">
+                        <div class="card card-apenas-imagem">
+                            <div class="card-image">
+                                <figure class="image is-1by1">
+                                    <img src="./imgs/image 7.png" alt="Parceiro 3">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="column is-3">
+                        <div class="card card-apenas-imagem">
+                            <div class="card-image">
+                                <figure class="image is-1by1">
+                                    <img src="./imgs/image 7.png" alt="Parceiro 4">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="area-faq" class="faq">
+            <div class="container">
+                <h1>FAQ (Perguntas frequentes)</h1>
+
+                <div class="columns">
+                    <!-- Coluna das perguntas -->
+                    <div class="column is-7">
+                        <div class="faq-item">
+                            <div class="faq-pergunta">
+                                <h3>Como funciona para poder doar algo?</h3>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Não cobramos nada para poder doar algo ou ser um voluntário em nosso site</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-pergunta">
+                                <h3>Como funciona para poder doar algo?</h3>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Não cobramos nada para poder doar algo ou ser um voluntário em nosso site</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-pergunta">
+                                <h3>Como funciona para poder doar algo?</h3>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Não cobramos nada para poder doar algo ou ser um voluntário em nosso site</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-pergunta">
+                                <h3>Preciso pagar para poder doar algo?</h3>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-resposta">
+                                <p>Não cobramos nada para poder doar algo ou ser um voluntário em nosso site</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coluna da imagem -->
+                    <div class="column is-5">
+                        <div class="faq-imagem">
+                            <figure class="image">
+                                <img src="./imgs/img-faq.png" alt="FAQ">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="area-contato" class="contato">
+            <div class="container">
+                <h1>Entre em contato conosco!</h1>
+
+                <div class="columns">
+                    <!-- Coluna da imagem -->
+                    <div class="column is-6">
+                        <div class="contato-imagem">
+                            <figure class="image">
+                                <img src="./imgs/img-contato.png" alt="Contato">
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- Coluna do formulário -->
+                    <div class="column is-6">
+                        <div class="contato-formulario">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Seu nome">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" type="email" placeholder="Seu e-mail">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <textarea class="textarea" placeholder="Sua mensagem"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button is-primary">Enviar Mensagem</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer has-background-white has-text-black py-4">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <p class="has-text-black">
+                        <strong class="has-text-black">herois Reais</strong>
+                        <span class="has-text-primary">|</span>
+                        © Todos os direitos reservados
+                        <span class="has-text-primary">|</span>
+                        <span class="ml-2">
+                            <!-- LinkedIn -->
+                            <a class="icon has-text-black" href="#">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <!-- Google -->
+                            <a class="icon has-text-black" href="#">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <!-- Instagram -->
+                            <a class="icon has-text-black" href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
