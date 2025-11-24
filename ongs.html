@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styleGeral.css">
+    <title>Herois Reais- ONGS</title>
+</head>
+
+<body>
+
+
+    <header>
+        <nav class="nav-1">
+            <div class="logo">
+                <a href="index.html"><img src="./imgs/isologoHeroisReias.png" alt=""></a>
+            </div>
+
+            <div class="barra-pesquisa">
+                <input type="text" placeholder="Buscar...">
+                <button type="submit">Pesquisar</button>
+            </div>
+
+
+            <!--BOTAO MODO ESCURO OK-->
+            <input type="checkbox" id="toggle">
+
+            <div class="display">
+                <label for="toggle">
+                    <div class="circle">
+                        <img src="./imgs/tabler_sun-filled.png" alt="" class="sun">
+                        <img src="./imgs/tabler_moon.png" alt="" class="moon">
+                    </div>
+                </label>
+            </div>
+
+
+            <div class="btn-logar">
+                <button class="button btn-login-custom">
+                    Logar
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+
+
+        <div class="hero-search">
+            <h1 class="title has-text-white is-3 has-text-centered">
+                Transforme-se em um(a) herói(na)
+            </h1>
+
+            <div class="field search-box">
+                <div class="control has-icons-right">
+                    <input   id="searchDoacao" class="input is-search" type="text" placeholder="Pesquisar">
+                    <span class="icon is-right">
+                        <span class="material-icons">filter_list</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <section class="section doacao-section">
+            <div class="container">
+
+                <div class="columns is-multiline">
+
+                    <!-- CARD 1 -->
+                    <div class="column is-4">
+                        <div class="card doacao-card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="./imgs/maos.png" alt="Campanha de alimentos">
+                                </figure>
+                            </div>
+
+                            <div class="card-content">
+                                <h3 class="title is-5">Cesta Solidária</h3>
+                                <p class="content">
+                                    Ajude famílias em situação de vulnerabilidade com doações de alimentos essenciais.
+                                </p>
+
+                                <button class="button is-primary is-fullwidth">
+                                    Doar agora
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div class="column is-4">
+                        <div class="card doacao-card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="./imgs/maos.png" alt="Campanha de roupas">
+                                </figure>
+                            </div>
+
+                            <div class="card-content">
+                                <h3 class="title is-5">Roupas para o Inverno</h3>
+                                <p class="content">
+                                    Doe roupas e agasalhos para quem mais sente o frio nas ruas.
+                                </p>
+
+                                <button class="button is-primary is-fullwidth">
+                                    Participar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div class="column is-4">
+                        <div class="card doacao-card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="./imgs/maos.png" alt="Campanha infantil">
+                                </figure>
+                            </div>
+
+                            <div class="card-content">
+                                <h3 class="title is-5">Brinquedos para Alegrar</h3>
+                                <p class="content">
+                                    Faça uma criança sorrir com a doação de brinquedos em bom estado.
+                                </p>
+
+                                <button class="button is-primary is-fullwidth">
+                                    Contribuir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="area-contato" class="contato">
+            <div class="container">
+                <h1>Entre em contato conosco!</h1>
+
+                <div class="columns">
+                    <!-- Coluna da imagem -->
+                    <div class="column is-6">
+                        <div class="contato-imagem">
+                            <figure class="image">
+                                <img src="./imgs/img-contato.png" alt="Contato">
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- Coluna do formulário -->
+                    <div class="column is-6">
+                        <div class="contato-formulario">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" type="text" placeholder="Seu nome">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input" type="email" placeholder="Seu e-mail">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <textarea class="textarea" placeholder="Sua mensagem"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <button class="button is-primary">Enviar Mensagem</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer has-background-white has-text-black py-4">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <p class="has-text-black">
+                        <strong class="has-text-black">herois Reais</strong>
+                        <span class="has-text-primary">|</span>
+                        © Todos os direitos reservados
+                        <span class="has-text-primary">|</span>
+                        <span class="ml-2">
+                            <!-- LinkedIn -->
+                            <a class="icon has-text-black" href="#">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <!-- Google -->
+                            <a class="icon has-text-black" href="#">
+                                <i class="fab fa-google"></i>
+                            </a>
+                            <!-- Instagram -->
+                            <a class="icon has-text-black" href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="./js/script.js"></script>
+</body>
