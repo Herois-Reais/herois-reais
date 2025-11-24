@@ -45,7 +45,7 @@ function salvarInformacoesCardLocalStorage(event){
         return
     }
 
-    if(!form.checkVisibility()){
+    if(!form.checkValidity()){
         alert("Preencha todos os campos.")
         return
     }
