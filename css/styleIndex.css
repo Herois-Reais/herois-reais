@@ -1,0 +1,817 @@
+/* ========== HEADER E NAVEGAÇÃO ========== */
+.nav-1 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 90px;
+}
+
+.barra-pesquisa {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    max-width: 500px;
+}
+
+.barra-pesquisa input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    max-width: 400px;
+}
+
+.barra-pesquisa button {
+    padding: 8px 16px;
+    background-color: var(--color-action-primary);
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+}
+
+.nav-botoes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-login-custom {
+    border: 3px solid var(--color-primary);
+    border-radius: 8px;
+    color: var(--color-auxiliary-primary);
+    background-color: transparent;
+    font-weight: 600;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.btn-login-custom:hover {
+    background-color: #1d5e21;
+    color: white;
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    background: #4A4F9E;
+}
+
+.navbar-menu a {
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* MODO ESCURO - HEADER */
+body.dark header {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+/* ========== TOGGLE DARK MODE ========== */
+#toggle {
+    display: none;
+}
+
+.display {
+    width: 20%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+label {
+    width: 85px;
+    height: 45px;
+    border-radius: 999px;
+    background: #F3F3F3;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.05) inset;
+    cursor: pointer;
+    position: relative;
+}
+
+.circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.1), -4px -4px 10px rgba(0,0,0,0.05) inset;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(10%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.circle img {
+    width: 30px;
+    position: absolute;
+    transition: 0.4s;
+}
+
+.sun {
+    margin-top: 0%;
+    opacity: 1;
+}
+
+.moon {
+    margin-top: -150%;
+    opacity: 0;
+}
+
+#toggle:checked + .display label {
+    box-shadow: inset 4px 4px 10px rgba(0,0,0,0.5);
+}
+
+#toggle:checked + .display label .circle {
+    left: 100%;
+    transform: translate(-110%, -50%);
+    background: #2C2C2F;
+}
+
+#toggle:checked + .display label .circle .sun {
+    margin-top: 150%;
+    opacity: 0;
+}
+
+#toggle:checked + .display label .circle .moon {
+    margin-top: 0%;
+    opacity: 1;
+}
+
+/* MODO ESCURO - TOGGLE */
+body.dark .display {
+    background-color: #000 !important;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+    background-color: var(--color-secondary);
+}
+
+.button.is-primary {
+    background-color: var(--color-action-secondary);
+}
+
+.hero button {
+    color: #000 !important;
+}
+
+/* MODO ESCURO - HERO */
+body.dark .hero-body {
+    background-color: var(--color-primary);
+}
+
+body.dark .hero-body h1,
+body.dark .hero-body p {
+    color: white;
+}
+
+body.dark .hero-body button {
+    background-color: var(--color-action-primary);
+}
+
+/* ========== SOBRE SECTION ========== */
+.sobre {
+    padding: 80px 0;
+}
+
+.container-sobre {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.conteudo-sobre {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.imagem-sobre {
+    flex: 1;
+}
+
+.imagem-sobre img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.texto-sobre {
+    flex: 1;
+}
+
+.barra-lateral {
+    display: flex;
+    gap: 30px;
+}
+
+.barra-vertical {
+    width: 6px;
+    height: 450px;
+    background-color: var(--color-action-primary);
+    flex-shrink: 0;
+}
+
+.conteudo-texto h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.conteudo-texto p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: black;
+}
+
+/* MODO ESCURO - SOBRE */
+body.dark .sobre {
+    background-color: #000 !important;
+}
+
+body.dark .sobre p,
+body.dark .sobre h2 {
+    color: var(--azul-);
+}
+
+/* ========== CAMPANHAS SECTION ========== */
+.campanhas {
+    background-color: var(--color-action-secondary);
+}
+
+.container-campanha {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.campanhas h1 {
+    padding-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    border: 4px solid #1B1616;
+    overflow: hidden;
+    max-width: 250px;
+    border-radius: 50px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.card-image {
+    height: 180px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    background: white;
+    text-align: center;
+}
+
+.card-content .button {
+    background-color: var(--color-action-primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* MODO ESCURO - CAMPANHAS */
+body.dark .campanhas {
+    background-color: var(--color-action-primary);
+}
+
+body.dark .campanhas h1 {
+    color: black;
+}
+
+body.dark .campanhas .card {
+    border: 4px solid var(--color-auxiliary-secondary);
+}
+
+/* ========== VOLUNTARIOS SECTION ========== */
+.voluntarios {
+    background-color: var(--color-secondary);
+}
+
+
+
+.voluntarios p {
+    color: #000;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.voluntarios h1 {
+    padding-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.container-voluntarios {
+    padding: 20px;
+}
+
+
+.splide {
+    
+    visibility: visible !important;
+}
+/* SPLIDE CAROUSEL - LAYOUT E ESPAÇAMENTO */
+.splide {
+    visibility: visible !important;
+     padding: 0 40px; /* cria espaço interno para as setas */
+}
+
+.splide__track {
+    visibility: visible !important;
+    overflow: visible !important;
+}
+
+.splide__list {
+    visibility: visible !important;
+    display: flex !important;
+    gap: 30px !important; /* Espaço entre os cards */
+    align-items: flex-start;
+}
+
+.splide__slide {
+    visibility: visible !important;
+    flex: 0 0 auto !important;
+    width: 300px !important; /* Largura fixa para cada card */
+    display: flex !important;
+    justify-content: center !important;
+}
+
+/* ESTILOS DOS CARDS DENTRO DO SPLIDE */
+.splide__slide .card {
+    border: 5px solid #1976D2;
+    overflow: hidden;
+    width: 100%;
+    max-width: 280px;
+    border-radius: 50px;
+    margin: 14px 0 0 0;
+    transition: all 0.3s ease;
+}
+
+.splide__slide .card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.splide__slide .card-image {
+    height: 180px;
+    overflow: hidden;
+}
+
+.splide__slide .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.splide__slide .card-content {
+    padding: 20px;
+    background: var(--color-auxiliary-primary);
+    text-align: center;
+  
+}
+
+.splide__slide .card-content h2,.splide__slide .card-content p  {
+    color: white;
+}
+
+/* SETAS DE NAVEGAÇÃO */
+.splide__arrow {
+    background: var(--color-primary);
+    width: 40px;
+    height: 40px;
+  
+    display: flex !important;
+ 
+}
+
+.splide__arrow svg {
+    fill: white;
+    width: 20px;
+    height: 20px;
+}
+
+.splide__arrow:hover {
+    background: var(--color-action-primary);
+}
+
+.splide__arrow--prev {
+    left: 10px;
+}
+
+.splide__arrow--next {
+    right: 10px;
+}
+
+/* MODO ESCURO - VOLUNTARIOS */
+body.dark .voluntarios {
+    background-color: var(--color-primary);
+}
+
+body.dark .voluntarios h1 {
+    color: white;
+}
+body.dark .voluntarios p {
+    color: white;
+}
+
+/* ========== ESPAÇO LARANJA ========== */
+.espaco-laranja {
+    background-color: var(--color-action-primary);
+}
+
+/* ========== CURSOS SECTION ========== */
+.cursos-ex {
+    text-align: center;
+    background-color: var(--color-secondary);
+}
+
+.cursos-ex h1 {
+    padding-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.cursos-ex p {
+    max-width: 70%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.container-cursos-ex {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container-cursos-ex .card-content {
+    padding: 20px;
+    background: var(--color-auxiliary-primary);
+}
+
+#desing {
+    background: var(--color-action-primary);
+}
+
+.container-cursos-ex .card-content p {
+    color: white;
+}
+
+.container-cursos-ex .card-content h2 {
+    color: white;
+    font-size: 1.7rem;
+}
+
+.container-cursos-ex .card {
+    border: none;
+}
+
+#desing-card {
+    border: 5px solid var(--color-action-primary);
+}
+
+.is-equal-height {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.is-equal-height .card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MODO ESCURO - CURSOS */
+body.dark .cursos-ex {
+    background-color: var(--color-primary);
+}
+
+body.dark .cursos-ex h1,
+body.dark .cursos-ex p {
+    color: white;
+}
+
+body.dark .container-cursos-ex .card {
+    border: 5px solid var(--color-auxiliary-primary) !important;
+}
+
+body.dark .container-cursos-ex #desing-card {
+    border: 5px solid var(--color-action-primary) !important;
+}
+
+/* ========== PARCEIROS SECTION ========== */
+.parceiros {
+    background-color: var(--color-action-primary);
+    padding: 60px 0;
+}
+
+.parceiros h1 {
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.parceiros p {
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    padding: 0 20px;
+}
+
+.card-apenas-imagem {
+    max-width: 250px;
+    max-height: 250px;
+    margin: 0 auto;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.card-apenas-imagem .card-image img {
+    border-radius: 10px;
+}
+
+/* MODO ESCURO - PARCEIROS */
+body.dark .parceiros {
+    background-color: #000 !important;
+}
+
+/* ========== FAQ SECTION ========== */
+.faq {
+    padding: 60px 0;
+    background-color: var(--color-secondary);
+}
+
+.faq h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.faq-item {
+    background: #0A9C55;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-pergunta {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-pergunta h3 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.faq-toggle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-action-primary);
+}
+
+.faq-resposta {
+    background-color: var(--color-primary);
+    padding: 0 20px;
+    display: none;
+}
+
+.faq-resposta p {
+    margin: 0;
+    padding: 20px 0;
+    color: white;
+}
+
+/* MODO ESCURO - FAQ */
+body.dark .faq {
+    background-color: #1F591F;
+}
+
+body.dark .faq-resposta p,
+body.dark .faq-pergunta h3,
+body.dark .faq h1
+ {
+    color: white;
+}
+
+/* ========== CONTATO SECTION ========== */
+.contato {
+    padding: 60px 0;
+}
+
+.contato .columns {
+    align-items: center;
+}
+
+.contato h1 {
+    text-align: center;
+    color: var(--color-auxiliary-primary);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.contato-imagem {
+    padding: 20px;
+}
+
+.contato-imagem img {
+    border-radius: 10px;
+}
+
+.contato-formulario {
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.field {
+    margin-bottom: 1.5rem;
+}
+
+.input, .textarea {
+    color: white;
+    background-color: var(--color-auxiliary-primary);
+    border-radius: 5px;
+}
+
+.input:invalid {
+    border-color: #e74c3c;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.textarea::placeholder,
+.input::placeholder {
+    color: #d8d8d8;
+    opacity: 1;
+}
+
+.button.is-primary {
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: bold;
+}
+
+/* MODO ESCURO - CONTATO */
+body.dark .contato {
+    background-color: #000 !important;
+}
+
+body.dark .contato h1 {
+    color: var(--azul-);
+}
+
+body.dark .contato input,
+body.dark .contato textarea {
+    border: none;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    background-color: white;
+}
+
+.footer .has-text-black,
+.footer .icon.has-text-black {
+    color: black !important;
+}
+
+/* MODO ESCURO - FOOTER */
+body.dark .footer {
+    background-color: #1a1a1a !important;
+    border-top: 1px solid #333;
+}
+
+body.dark .footer .has-text-black,
+body.dark .footer .icon.has-text-black,
+body.dark .footer strong,
+body.dark .footer p {
+    color: #e0e0e0 !important;
+}
+
+body.dark .footer .has-text-primary {
+    color: #4a9eff !important;
+}
+
+/* ========== COMPONENTES ADICIONAIS ========== */
+.hero-search {
+    background: var(--color-secondary);
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+body.dark .hero-search {
+    background: var(--color-primary);
+}
+
+.search-box {
+    max-width: 700px;
+    margin: 2rem auto 0;
+}
+
+.input.is-search {
+    background: transparent;
+    border: 2px solid #19b67f;
+    border-radius: 12px;
+    padding: 12px 16px;
+    color: white;
+}
+
+.input.is-search::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.icon.is-right {
+    color: white;
+    right: 14px;
+}
+
+.doacao-section,
+.hero-search {
+    background-color: var(--color-primary);
+    padding: 3rem 0;
+}
+
+.doacao-card {
+    background-color: #5A2D82;
+    border-radius: 14px;
+    overflow: hidden;
+    height: 100%;
+    color: #ffffff;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.doacao-card .card-content {
+    background-color: #5A2D82 !important;
+}
+
+.doacao-card .title,
+.doacao-card .content {
+    color: #ffffff;
+}
+
+.material-icons {
+    cursor: pointer;
+}

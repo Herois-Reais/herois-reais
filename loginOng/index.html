@@ -15,33 +15,35 @@
 <body>
     <div class="container">
         <div class="form-image">
-            <img src="img/isologoHeroisReais3D.png" alt="">
+            <img src="./img/isologoHeroisReais3D.png" alt="">
         </div>
         <div class="form">
-            <form action="#">
+            <form action="#" id="formLoginOng">
                 <div class="form-header">
                     <div class="title">
                         <h1>Bem vindo(a) de volta!</h1>
 
                 <div class="input-group">
                     <div class="input-box">
-                        <label for="e-mail">E-mail ou Cnpj</label>
-                        <input id="e-mail" type="text" name="firstname" placeholder="Digite e-mail ou CNPJ" required>
+                        <label for="email">E-mail ou Cnpj</label>
+                        <input id="email" type="text" name="firstname" placeholder="Digite e-mail ou CNPJ" required>
                     </div>
 
                     <div class="input-box">
                         <label for="password">Senha</label>
-                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required maxlength="8">
                     </div>
 
                 </div>
 
                 <div class="entrar-button">
-                    <button><a href="#">Entrar</a> </button>
+                    <button id="btnEntrarOng" type="submit">Entrar</button>
                 </div>
             </form>
         </div>
     </div>
+
+    <script type="module" src="./js/verificarLogin.js"></script>
 </body>
 
 </html>
