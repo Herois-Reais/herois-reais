@@ -1,0 +1,165 @@
+@import "../css/styleGeral.css";
+
+*{
+  color: var(--color-theme-clear);
+}
+
+body {
+  background-color: var(--color-secondary);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin: 50px 0;
+  width: 90%;
+  justify-self: center;
+}
+
+.btnVoltar{
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: var(--color-auxiliary-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnVoltar:hover{
+  border: 0.5px solid var(--color-primary);
+  box-shadow: 0px 0px 3px 2px var(--color-primary);
+  -webkit-box-shadow: 0px 0px 3px 2px var(--color-primary);
+  -moz-box-shadow: 0px 0px 3px 2px var(--color-primary);
+}
+
+.btnVoltar i{
+  font-size: 35px;
+}
+
+header h1 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align:center;
+}
+
+main {
+  background-color: var(--color-auxiliary-primary);
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.titleTermos{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+
+/* ------------------ RESPOSIVIDADE */
+@media(max-width: 1155px){
+  header{
+    gap: 30px;
+  }
+
+  header h1{
+    font-size: 35px;
+  }
+
+  .btnVoltar{
+    width: 45px;
+    height: 45px;
+  }
+
+  .btnVoltar i{
+    font-size: 30px;
+  }
+}
+
+
+@media(max-width: 995px){
+  header h1{
+    font-size: 30px;
+  }
+
+  .title{
+    font-size: 23px;
+  }
+  
+  .termos{
+    font-size: 17px;
+  }
+}
+
+
+@media (max-width: 865px){
+  header{
+    gap: 20px;
+  }
+
+  header h1{
+    font-size: 25px;
+  }
+
+  .btnVoltar{
+    width: 40px;
+    height: 40px;
+  }
+
+  .btnVoltar i{
+    font-size: 25px;
+  }
+
+  .title{
+    font-size: 20px;
+  }
+
+  .termos{
+    font-size: 15px;
+  }
+}
+
+@media(max-width: 718px){
+  header{
+    gap: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: justify;
+  }
+
+  header h1{
+    font-size: 27px;
+    text-align: start;
+  }
+}
+
+@media(max-width: 450px){
+  header h1{
+    font-size: 20px;
+  }
+
+  .btnVoltar{
+    width: 35px;
+    height: 35px;
+  }
+
+  .btnVoltar i{
+    font-size: 20px;
+  }
+
+  .title{
+    font-size: 17px;
+  }
+
+  .termos{
+    font-size: 12px;
+  }
+}

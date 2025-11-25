@@ -14,7 +14,7 @@
         <div class="header">
             <button class="button is-ghost is-medium botaovoltar">
                 <span class="icon is-small">
-                    <i class="fas fa-arrow-left"></i>
+                    <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
                 </span>
             </button>
             <h1 class="title is-4 has-text-white tituloprincipal">
@@ -53,21 +53,21 @@
                                 <div class="field">
                                     <label class="label rotulo-formulario">E-mail:</label>
                                     <div class="control">
-                                        <input class="input is-medium entrada" type="email">
+                                        <input class="input is-medium entrada" type="email" required>
                                     </div>
                                 </div>
 
                                 <div class="field">
                                     <label class="label rotuloformulario">Senha:</label>
                                     <div class="control">
-                                        <input class="input is-medium entrada" type="password">
+                                        <input class="input is-medium entrada" type="password" required maxlength="8">
                                     </div>
                                 </div>
 
                                 <div class="field mt-5">
                                   <div class="control">
-                                        <a href="#" class="button is-success is-fullwidth is-large botaoentrar">
-                                            Entrar
+                                        <a href="#">
+                                            <button class="button is-success is-fullwidth is-large botaoentrar" type="submit">Entrar</button>
                                         </a>
                                     </div>
                                 </div>
@@ -113,7 +113,7 @@
     <div class="modal-content cardselecao is-narrow"> 
         <p class="title is-5 has-text-white mb-4">Você é:</p>
        <div class="field">
-            <a href="" id="btn-ong" class="button is-info is-large is-fullwidth botao-modal-ong">
+            <a href="../Cadastro_ONG/index.html" id="btn-ong" class="button is-info is-large is-fullwidth botao-modal-ong">
                 ONG
             </a>
         </div>
