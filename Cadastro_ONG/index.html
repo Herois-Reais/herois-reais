@@ -59,11 +59,26 @@
                         <input id="confirmPassword" type="password" name="confirmPassword" placeholder="Digite sua senha novamente" required maxlength="8">
                     </div>
 
+                    <div class="field">
+                        <div class="control checkbox-termos">
+                            <label class="checkbox">
+                                <input type="checkbox" id="inputTermos" required>
+                                <span class="has-text-weight-bold texto-termos">
+                                    Concordo com os <a href="../OngPoliticaPrivacidade/ongTermos.html" class="termos-link">termos de uso</a> e 
+                                    <a href="../OngPoliticaPrivacidade/ongTermos.html" class="termos-link">Política de privacidade</a>
+                                </span>
+                            </label>
+                        </div>
+                        <span class="help is-danger" id="erroTermos"></span>
+                    </div>
+
              
 
                 <div class="continue-button">
                     <button id="btnCriarContaOng" type="submit">Continuar</button>
                 </div>
+
+                
             </form>
         </div>
     </div>

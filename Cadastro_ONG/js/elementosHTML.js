@@ -5,6 +5,7 @@ const telefoneOng = document.getElementById('number')
 const senhaOng = document.getElementById('password')
 const confimarSenhaOng = document.getElementById('confirmPassword')
 const botaoCadastrarOng = document.getElementById('btnCriarContaOng')
+const checkboxTermos = document.getElementById('inputTermos')
 
 export{
     nomeOng,
@@ -13,6 +14,7 @@ export{
     telefoneOng,
     senhaOng,
     confimarSenhaOng,
-    botaoCadastrarOng
+    botaoCadastrarOng,
+    checkboxTermos
 }
 
