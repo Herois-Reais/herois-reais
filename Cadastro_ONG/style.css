@@ -155,10 +155,13 @@ body {
     padding: 0.62rem;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    font-weight: bold;
 }
 
 .continue-button button:hover {
     background-color: #2E662E;
+    color: #fff;
 }
 
 .continue-button button a {
@@ -167,6 +170,24 @@ body {
     font-weight: 500;
     color: #000000;
 }
+
+/* Checkbox */
+.checkbox-termos {
+    margin-top: 10px;
+    text-align: left;
+}
+
+
+.texto-termos {
+    color: #1A1616;
+}
+
+.termos-link {
+    color: #2E662E !important;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 
 @media screen and (max-width: 1330px) {
     .form-image {

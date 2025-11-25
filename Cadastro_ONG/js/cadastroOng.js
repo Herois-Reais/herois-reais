@@ -1,4 +1,4 @@
-import { botaoCadastrarOng, cnpjOng, confimarSenhaOng, emailOng, nomeOng, senhaOng, telefoneOng } from "./elementosHTML.js"
+import { botaoCadastrarOng, checkboxTermos, cnpjOng, confimarSenhaOng, emailOng, nomeOng, senhaOng, telefoneOng } from "./elementosHTML.js"
 
 const localStorageKey = 'listaCadastroOngs'
 
@@ -18,13 +18,19 @@ function salvarCadastroOngLocalStorage(event){
         return
     }
 
+    if(!checkboxTermos.checked){
+        alert("Concorde com os termos de uso e política de privacidade para continuar")
+        return
+    }
+
     const novoCadastro = {
         id: Date.now(),
         ongNome: nomeOng.value,
         ongCnpj: cnpjOng.value,
         ongEmail: emailOng.value,
         ongTelefone: telefoneOng.value,
-        ongSenha: senhaOng.value
+        ongSenha: senhaOng.value,
+        termosAceitos: checkboxTermos.checked
     }
 
     const cadastrosExistentes = JSON.parse(localStorage.getItem(localStorageKey)) || []
