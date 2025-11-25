@@ -9,9 +9,6 @@
     font-family: "Roboto Mono", monospace;
 }
 
-html {
-    scroll-behavior: smooth;
-}
 
 /* CRIANDO AS VARIÁVEIS COM AS CORES DO SITE */
 :root {
