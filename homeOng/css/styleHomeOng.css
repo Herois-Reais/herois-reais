@@ -36,11 +36,11 @@ body{
 .excluirPerfilOng{
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     
 }
 
-.btnExcluir{
+.btnExcluir {
     width: 35px;
     height: 35px;
     background-color: var(--color-alert-delete);
@@ -52,7 +52,15 @@ body{
     border-color: transparent;
 }
 
-.btnExcluir:hover, .btnCardCampDoaVolIconPlus:hover, .btnExcluirCard:hover, .btnEditarDadosCard:hover{
+.btnVoltar{
+    font-size: 20px;
+    background-color: var(--color-auxiliary-primary);
+    margin-left: 20px;
+    width: 37px;
+    height: 37px;
+}
+
+.btnExcluir:hover, .btnCardCampDoaVolIconPlus:hover, .btnExcluirCard:hover, .btnEditarDadosCard:hover {
     border: 0.5px solid var(--color-theme-clear);
     box-shadow: 0px 0px 3px 1px rgba(255,255,255,1);
     -webkit-box-shadow: 0px 0px 3px 1px rgba(255,255,255,1);
