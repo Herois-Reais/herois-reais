@@ -1,133 +1,134 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heróis Reais - Login</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="cadastro-doador.html">
-</head>
-<body>
 
-    <div class="barratopo">
-        <div class="header">
-            <button class="button is-ghost is-medium botaovoltar">
-                <span class="icon is-small">
-                    <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
-                </span>
-            </button>
-            <h1 class="title is-4 has-text-white tituloprincipal">
-                Que bom vê-lo(a) novamente!
-            </h1>
-        </div>
-        
-        <div class="direita">
-            <div class="logo-topo">
-                <img src="isologoHeroisReias.png" alt="Heróis Reais Logo">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Heróis Reais - Login</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="cadastro-doador.html">
+    </head>
+
+    <body>
+
+        <div class="barratopo">
+            <div class="header">
+                <button class="button is-ghost is-medium botaovoltar">
+                    <span class="icon is-small">
+                        <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
+                    </span>
+                </button>
+                <h1 class="title is-4 has-text-white tituloprincipal">
+                    Que bom vê-lo(a) novamente!
+                </h1>
             </div>
-            <div class="modoec">
-                <span id="toggle-theme-btn" class="icon is-medium" style="cursor: pointer;">
-                    <i class="fas fa-sun"></i>
-                </span>
-            </div>
-        </div>
-    </div>
 
-    <section class="hero is-fullheight fundo">
-        <div class="hero-body p-0">
-            <div class="conteudoprincipal">
-                <div class="columns is-vcentered is-gapless">
-                    
-                    <div class="column is-6 is-offset-1 area-ilustracao">
-                        <div class="fundocirculogrande">
-                            <img src="isologoHeroisReais3D (1).png" alt="Heróis Reais Icone" class="iconeprincipal">
-                        </div>
-                    </div>
-
-                    <div class="column is-4 wrapper-formulario-login">
-                        <div class="conteudocardlogin">
-                            <p class="title is-4 has-text-dark tituloformulario">Entrar com uma conta:</p>
-                            
-                            <form>
-                                <div class="field">
-                                    <label class="label rotulo-formulario">E-mail:</label>
-                                    <div class="control">
-                                        <input class="input is-medium entrada" type="email" required>
-                                    </div>
-                                </div>
-
-                                <div class="field">
-                                    <label class="label rotuloformulario">Senha:</label>
-                                    <div class="control">
-                                        <input class="input is-medium entrada" type="password" required maxlength="8">
-                                    </div>
-                                </div>
-
-                                <div class="field mt-5">
-                                  <div class="control">
-                                        <a href="#">
-                                            <button class="button is-success is-fullwidth is-large botaoentrar" type="submit">Entrar</button>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div class="has-text-centered my-4">
-                                    <hr class="separador">
-                                    <span class="tag is-dark tagseparadora">OU</span>
-                                </div>
-
-                                <div class="field mt-4">
-                                    <div id="g_id_onload"
-                                        data-client_id="[SEU-CLIENT-ID-AQUI]"
-                                        data-callback="handleCredentialResponse"
-                                        data-auto_prompt="false">
-                                    </div>
-                                    <div class="g_id_signin"
-                                        data-type="standard"
-                                        data-size="large"
-                                        data-theme="outline"
-                                        data-text="signup_with"
-                                        data-shape="rectangular"
-                                        data-locale="pt-BR"
-                                        data-logo_alignment="left">
-                                    </div>
-                                </div>
-                                <div class="has-text-centered mt-5">
-                                    Não tem conta? 
-                                    <a id="btn-criar-conta" class="has-text-info has-text-weight-bold linkcriarconta linkcriar-conta">
-                                        Criar conta
-                                    </a>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
+            <div class="direita">
+                <div class="logo-topo">
+                    <img src="isologoHeroisReias.png" alt="Heróis Reais Logo">
+                </div>
+                <div class="modoec">
+                    <span id="toggle-theme-btn" class="icon is-medium" style="cursor: pointer;">
+                        <i class="fas fa-sun"></i>
+                    </span>
                 </div>
             </div>
         </div>
-    </section>
 
-    <div id="modalselecao" class="modal"> 
-    <div class="modal-background"></div>
-    <div class="modal-content cardselecao is-narrow"> 
-        <p class="title is-5 has-text-white mb-4">Você é:</p>
-       <div class="field">
-            <a href="../Cadastro_ONG/index.html" id="btn-ong" class="button is-info is-large is-fullwidth botao-modal-ong">
-                ONG
-            </a>
+        <section class="hero is-fullheight fundo">
+            <div class="hero-body p-0">
+                <div class="conteudoprincipal">
+                    <div class="columns is-vcentered is-gapless">
+
+                        <div class="column is-6 is-offset-1 area-ilustracao">
+                            <div class="fundocirculogrande">
+                                <img src="isologoHeroisReais3D (1).png" alt="Heróis Reais Icone" class="iconeprincipal">
+                            </div>
+                        </div>
+
+                        <div class="column is-4 wrapper-formulario-login">
+                            <div class="conteudocardlogin">
+                                <p class="title is-4 has-text-dark tituloformulario">Entrar com uma conta:</p>
+
+                                <form id="formCampoUsuario">
+                                    <div class="field">
+                                        <label for="inputEmail" class="label rotulo-formulario">E-mail:</label>
+                                        <div class="control">
+                                            <input id="inputEmail" class="input is-medium entrada" type="email" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="inputSenha" class="label rotuloformulario">Senha:</label>
+                                        <div class="control">
+                                            <input id="inputSenha" class="input is-medium entrada" type="password" required maxlength="8">
+                                        </div>
+                                    </div>
+
+                                    <div class="field mt-5">
+                                        <div class="control">
+                                            <button id="btnEntrar" class="button is-success is-fullwidth is-large botaoentrar" type="submit">
+                                                Entrar
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="has-text-centered my-4">
+                                        <hr class="separador">
+                                        <span class="tag is-dark tagseparadora">OU</span>
+                                        <hr class="separador">
+                                    </div>
+
+                                    <div class="field mt-4">
+                                        <div id="g_id_onload" data-client_id="[SEU-CLIENT-ID-AQUI]"
+                                            data-callback="handleCredentialResponse" data-auto_prompt="false">
+                                        </div>
+                                        <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"
+                                            data-text="signup_with" data-shape="rectangular" data-locale="pt-BR"
+                                            data-logo_alignment="left">
+                                        </div>
+                                    </div>
+                                    <div class="has-text-centered mt-5">
+                                        Não tem conta?
+                                        <a id="btn-criar-conta"
+                                            class="has-text-info has-text-weight-bold linkcriarconta linkcriar-conta">
+                                            Criar conta
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="modalselecao" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content cardselecao is-narrow">
+                <p class="title is-5 has-text-white mb-4">Você é:</p>
+                <div class="field">
+                    <a href="../Cadastro_ONG/index.html" id="btn-ong"
+                        class="button is-info is-large is-fullwidth botao-modal-ong">
+                        ONG
+                    </a>
+                </div>
+                <div class="field">
+                    <a href="cadastro-doador.html" id="btn-doador"
+                        class="button is-success is-large is-fullwidth botao-modal-doador">
+                        Doador(a)
+                    </a>
+                </div>
+            </div>
+            <button class="modal-close is-large modalclose" aria-label="close"></button>
         </div>
-        <div class="field">
-            <a href="cadastro-doador.html" id="btn-doador" class="button is-success is-large is-fullwidth botao-modal-doador">
-                Doador(a)
-            </a>
-        </div>
-    </div>
-    <button class="modal-close is-large modalclose" aria-label="close"></button>
-</div>
-    
-    <script src="script.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-</body>
+
+        <script type="module" src="./js/verificaDoador.js"></script>
+        <script src="./js/script.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
+    </body>
+
 </html>

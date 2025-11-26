@@ -321,3 +321,13 @@ html, body {
     border-color: var(--cor-principal-escura);
     color: white;
 }
+
+.has-text-centered{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mt-5{
+    gap: 10px;
+}
