@@ -1,5 +1,6 @@
 import { botaoSalvarAlteracoes, cnpjOng, emailOng, imgPerfilOng, imgPreview, nomeOng, senhaOng, telefoneOng, textUpload } from "./elementosHTML.js";
 
+const localStorageKey = 'listaCadastroOngs'
 const localStorageOngLogadaKey = 'ongLogada'
 
 let ongLogadaNome = null
@@ -58,7 +59,7 @@ imgPerfilOng.addEventListener('change', function(event){
     }
 })
 
-// document.addEventListener('DOMContentLoaded', salvarImagem)
+
 function salvarFotoOng(nomeOngAtual){
     if(base64ImageSalva && nomeOngAtual){
         const localStorageKey = getLocalStorageKeyFoto(nomeOngAtual)
@@ -69,12 +70,22 @@ function salvarFotoOng(nomeOngAtual){
     }
 }
 
+
 botaoSalvarAlteracoes.addEventListener('click', function(event){
     event.preventDefault()
+
+    const ongLogadaJSON = localStorage.getItem(localStorageOngLogadaKey)
+    const dadosOngOriginal = ongLogadaJSON ? JSON.parse(ongLogadaJSON) : null
+
+    if(!dadosOngOriginal || !dadosOngOriginal.id){
+        alert("ERRO: Dados não enontrados")
+        return
+    }
 
     const nomeAtual = nomeOng.value
 
     const dadosAtualizados = {
+        id: dadosOngOriginal.id,
         ongNome: nomeAtual,
         ongTelefone: telefoneOng.value,
         ongCnpj: cnpjOng.value,
@@ -82,7 +93,20 @@ botaoSalvarAlteracoes.addEventListener('click', function(event){
         ongSenha: senhaOng.value
     }
 
+    const ongsCadastradasJSON = localStorage.getItem(localStorageKey)
+    let listaOngsCadastrados = ongsCadastradasJSON ? JSON.parse(ongsCadastradasJSON) : []
+
+    const indexOng = listaOngsCadastrados.findIndex(ong => ong.id === dadosOngOriginal.id)
+
+    if(indexOng !== -1){
+        listaOngsCadastrados[indexOng] = dadosAtualizados
+
+       localStorage.setItem(localStorageKey, JSON.stringify(listaOngsCadastrados)) 
+    }
+
+
     localStorage.setItem(localStorageOngLogadaKey, JSON.stringify(dadosAtualizados))
+    
 
     salvarFotoOng(nomeAtual)
 
@@ -98,7 +122,6 @@ botaoSalvarAlteracoes.addEventListener('click', function(event){
 function exibirDadosOng(){
     const ongLogadaJSON = localStorage.getItem(localStorageOngLogadaKey)
     const dadosOng = ongLogadaJSON ? JSON.parse(ongLogadaJSON) : null
-
     if(dadosOng){
         // Pegando o nome da Ong para mostrar a foto do perfil dela
         ongLogadaNome = dadosOng.ongNome
@@ -128,4 +151,4 @@ telefoneOng.addEventListener('input', function() {
     }
 })
 
-document.addEventListener('DOMContentLoaded', exibirDadosOng)
+exibirDadosOng()
