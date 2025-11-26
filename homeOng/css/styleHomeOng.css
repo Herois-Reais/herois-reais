@@ -159,6 +159,19 @@ body{
     border-radius: 10px;
     border-color: var(--color-theme-clear);
     outline: 2px solid var(--color-theme-clear);
+    border-bottom: 2px;
+    box-shadow: none;
+}
+
+/* Removendo as setinhas do inputs do tipo numéro */
+.camposInfoPerfilOng input[type="number"]::-webkit-inner-spin-button,
+.camposInfoPerfilOng input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.camposInfoPerfilOng input[type="number"]{
+    -moz-appearance: textfield;
 }
 
 .btnSalvarAlteracoesContent{
@@ -326,7 +339,7 @@ body{
 }
 
 .cardProjeto{
-    width: 400px;
+    width: 260px;
     height: auto;
     background-color: var(--color-theme-clear);
     color: var(--color-theme-dark);

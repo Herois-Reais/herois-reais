@@ -1,6 +1,7 @@
 import { botaoLogar, emailCnpjDigitado, senhaDigitada } from "./elementosHTML.js"
 
 const localStorageKey = 'listaCadastroOngs'
+const localStorageOngLogadaKey = 'ongLogada'
 const form = document.getElementById('formLoginOng')
 
 function verificarCadastro(event){
@@ -11,6 +12,8 @@ function verificarCadastro(event){
     const ongEncontrada = listaOngsCadastrados.find(ong => (ong.ongEmail === emailCnpjDigitado.value || ong.ongCnpj === emailCnpjDigitado.value) && ong.ongSenha === senhaDigitada.value)
     
     if(ongEncontrada){
+        localStorage.setItem(localStorageOngLogadaKey, JSON.stringify(ongEncontrada))
+        
         alert(`Bem-vinda(o): ${ongEncontrada.ongNome}`)
         window.location.href = "../homeOng/homeOng.html"
 
