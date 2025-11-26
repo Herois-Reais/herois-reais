@@ -175,6 +175,7 @@
 @media(min-width: 851px){
     .areaMenuHamburguer{
         display: none !important;
+        background-color: transparent;
     }
 
     .perfilOngContainer{
@@ -199,6 +200,7 @@
         margin-top: 20px;
         justify-content: flex-start;
         align-self: center;
+        background-color: transparent;
     }
 
     .btnMenuHamburguer{
@@ -253,6 +255,12 @@
     .btnExcluirCard, .btnEditarDadosCard{
         width: 200px;
         height: 40px;
+    }
+
+    .excluirPerfilOng{
+        margin-top: 20px;
+        width: 94%;
+        align-self: center;
     }
 
 
@@ -346,13 +354,13 @@
 }
 
 .classeTeste{
-    z-index: initial;
-    width: 90%;
-    height: 50px;
-    margin-top: 20px;
-    justify-content: flex-start;
-    align-self: center;
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
+    z-index: initial !important;
+    width: 90% !important;
+    height: 50px !important;
+    margin-top: 20px !important;
+    justify-content: flex-start !important;
+    align-self: center !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
 }

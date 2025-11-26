@@ -122,6 +122,7 @@ document.addEventListener('DOMContentLoaded', function(){
                         btnMenuHamburguer.style.mozBoxShadow = 'none'
                     })
                 }
+                
                 sectionMenuHamX.classList.add('classeTeste')
             }
         })
