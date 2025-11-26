@@ -46,29 +46,26 @@
                     <label for="imageUpload" class="cardImagemPerfil"> <!-- Imagem de perfil -->
                         <input type="file" class="inputImg" id="imageUpload" accept="image/*">
 
-                        <img id="imgSubida" src="" class="imagemPerfil" alt="Prévia da Imagem de capa">
+                        <img id="imgSubida" src="" class="imagemPerfil">
                         <span class="textUpload">Adicionar imagem de perfil</span>
                     </label> <!-- FIM - Imagem de perfil -->
 
                     <!-- CONTAINER DAS INPUTS COM INFORMAÇÕES DAS ONGs -->
                     <form class="camposInfoPerfilOng">
-                        <input class="input" type="text" placeholder="Razão social"/>
-                        <input class="input" type="text" placeholder="00.000.000/0000-00" maxlength="14"/>
-                        <input class="input" type="email" placeholder="ongX@gmail.com"/>
+                        <input class="input" type="text" placeholder="Razão social" id="inputNomeOng" required/>
+                        <input class="input" type="number" placeholder="00.000.000/0000-00" maxlength="14" required pattern="[0-9]{0, 14}" id="inputCnpjOng"/>
+                        
+                        <input class="input" type="email" placeholder="ongX@gmail.com" id="inputEmail"/>
 
                         <div class="senhaPerfilOng"> <!-- Div para poder colocar o olho de ver ou não a senha -->
-                            <input class="input" type="current-password" placeholder="*********"/>
+                            <input class="input" type="current-password" placeholder="*********" id="inputSenha" maxlength="8" required/>
                             <button class="bntMostrarSenhaPerfilOng">
                                 <i class="fa-solid fa-eye"></i>
+                                <!-- <i class="fa-solid fa-eye-slash"></i> -->
                             </button>
                         </div> <!-- FIM - Div para poder colocar o olho de ver ou não a senha -->
 
-                        <input class="input" type="text" placeholder="(00) 0 0000 - 0000"/>
-                        <input class="input" type="text" placeholder="https://www.ongx.com/"/>
-                        <input class="input" type="text" placeholder="Porte: Médio porte"/>
-                        <input class="input" type="text" placeholder="Ramo: Assistência social"/>
-                        <input class="input" type="text" placeholder="CEP: 00000-000"/>
-                        <input class="input" type="text" placeholder="Nº: 00"/>
+                        <input class="input" type="number" placeholder="(00) 0 0000 - 0000" id="inputTelefone" required/>
                     </form> <!-- FIMM - CONTAINER DAS INPUTS COM INFORMAÇÕES DAS ONGs -->
 
                     <!-- Botão para salvar as alterações do perfil da ong-->
@@ -151,8 +148,6 @@
                             </a>
                         </button>
                     </div> <!-- FIM - Título e Botão de adionar card de projeto da ONG  -->
-
-                   
 
                 </section> <!-- FIM - Card que envolve todos os card de projetos da ONG  -->
 
