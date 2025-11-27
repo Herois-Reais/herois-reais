@@ -1,6 +1,13 @@
 /* Reset simples */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html,body { height: 100%; }
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+html,body { 
+  height: 100%; 
+}
 
 :root{
   --bg-dark: #1A1616;
@@ -55,8 +62,20 @@ body{
 .perfil img{
   width:50px;
   height:50px;
-   border-radius: 50% !important;
+  border-radius: 50% !important;
+  object-fit: cover;
 }
+
+.profile-btn{
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .search img{
   width:20px;
   height:20px;

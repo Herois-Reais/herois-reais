@@ -1,4 +1,4 @@
-import { botaoSalvarAlteracoes, cnpjOng, emailOng, imgPerfilOng, imgPreview, nomeOng, senhaOng, telefoneOng, textUpload } from "./elementosHTML.js";
+import { botaoSalvarAlteracoes, btnExcluirPerfilOng, cnpjOng, emailOng, imgPerfilOng, imgPreview, nomeOng, senhaOng, telefoneOng, textUpload } from "./elementosHTML.js";
 
 const localStorageKey = 'listaCadastroOngs'
 const localStorageOngLogadaKey = 'ongLogada'
@@ -152,3 +152,34 @@ telefoneOng.addEventListener('input', function() {
 })
 
 exibirDadosOng()
+
+
+function excluirDadosOng(){
+    const ongLogadaJSON = localStorage.getItem(localStorageOngLogadaKey)
+    const dadosOngLogada = ongLogadaJSON ? JSON.parse(ongLogadaJSON) : null
+
+    if(!dadosOngLogada || !dadosOngLogada.id || !dadosOngLogada.ongNome){
+        alert("ERRO: Não foi encontrado os dados da ong para excluir")
+        return
+    }
+
+    if(!confirm(`Tem certeza que deseja excluir permanentemente o perfil da ONG: ${dadosOngLogada.ongNome}`)){
+        return
+    }
+
+    const ongsCadastradasJSON = localStorage.getItem(localStorageKey)
+    let listaOngsCadastrados = ongsCadastradasJSON ? JSON.parse(ongsCadastradasJSON) : []
+
+    const novaListaOngs = listaOngsCadastrados.filter(ong => ong.id !== dadosOngLogada.id)
+
+    localStorage.setItem(localStorageKey, JSON.stringify(novaListaOngs))
+    localStorage.removeItem(localStorageOngLogadaKey)
+
+    const chaveFoto = getLocalStorageKeyFoto(dadosOngLogada.ongNome)
+
+    alert("Perfil da ONG excluído com sucesso!")
+
+    window.location.href = "../loginOng/index.html"
+}
+
+btnExcluirPerfilOng.addEventListener('click', excluirDadosOng)
