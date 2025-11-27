@@ -78,7 +78,7 @@ botaoSalvarAlteracoes.addEventListener('click', function(event){
     const dadosOngOriginal = ongLogadaJSON ? JSON.parse(ongLogadaJSON) : null
 
     if(!dadosOngOriginal || !dadosOngOriginal.id){
-        alert("ERRO: Dados não enontrados")
+        alert("ERRO: Dados não encontrados")
         return
     }
 
@@ -117,8 +117,8 @@ botaoSalvarAlteracoes.addEventListener('click', function(event){
     alert("Alterações salvas com sucesso!")
 })
 
-/* PEGANDO OS DADOS DA ONG PARA MOSTRÁ-LOS NO PERFIL */
 
+/* PEGANDO OS DADOS DA ONG PARA MOSTRÁ-LOS NO PERFIL */
 function exibirDadosOng(){
     const ongLogadaJSON = localStorage.getItem(localStorageOngLogadaKey)
     const dadosOng = ongLogadaJSON ? JSON.parse(ongLogadaJSON) : null

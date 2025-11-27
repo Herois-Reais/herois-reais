@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Perfil de usuário</title>
+    <link rel="shortcut icon" href="../imgs/isologoHeroisReias.png" type="image/x-icon">
    <link rel="stylesheet" href="historico.css">
      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9716f3df53.js" crossorigin="anonymous"></script>
@@ -14,7 +15,9 @@
 
   <div class="modal-content">
 
-    <button class="close-modal"><img src="/imgs/Group.png" alt=""></button>
+    <button class="close-modal">
+      <img src="/imgs/Group.png" alt="Exluir perfil">
+    </button>
 
     <div class="historico-wrapper">
 
@@ -42,15 +45,21 @@
 
       <!-- Lado Direito -->
       <div class="right-panel">
-        <img class="profile-pic" src="/imgs/perfil.png" alt="Foto do usuário">
+        <label for="imageUpload" class="cardImagemPerfil">
+            <input type="file" class="inputImg" id="imageUpload" accept="image/*">
+
+            <img id="imgSubida" src="" class="imagemPerfil">
+            <span class="textUpload">Adicionar imagem de perfil</span>
+        </label>
 
         <p class="points">Pontos totais: 100</p>
 
-        <form class="profile-form">
-          <input type="text" placeholder="Ametista Faceta-5 Corte-8XM">
-          <input type="email" placeholder="ametista@gmail.com">
-          <input type="password" placeholder="***********">
-          <button class="btn-save">Salvar alteração</button>
+        <form class="profile-form" id="formInfoUsu">
+          <input type="text" placeholder="Ametista Faceta-5 Corte-8XM" required id="inputNomeUsu">
+          <input type="email" placeholder="ametista@gmail.com" required id="inputEmailUsu">
+          <input type="current-password" placeholder="********" maxlength="8" required id="inputSenhaUsu">
+          <input type="number" placeholder="00000-000" required id="inputCepUsu">
+          <button class="btn-save" id="btnSalvarAlteracoesUsu">Salvar alteração</button>
         </form>
       </div>
 
@@ -68,6 +77,7 @@
   </div>
 </div>
 
+<script type="module" src="./js/adicionarDadosUsu.js"></script>
 <script src="historico.js"></script>
 </body>
 </html>
