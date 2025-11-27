@@ -56,5 +56,5 @@ if(contactForm){
 
 
 document.getElementById("openHistoricoBtn").addEventListener("click", () => {
-    window.location.href = "perfil.html";
+    window.location.href = "../Perfil/perfil.html";
 });

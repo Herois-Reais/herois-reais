@@ -3,7 +3,7 @@ const perfilOngContainer = document.getElementById('perfilOngC');
 const iconeMenuHam = document.querySelector('.fa-bars')
 const iconeMenuX = document.querySelector('.fa-x')
 const sectionMenuHamX = document.querySelector('.areaMenuHamburguer')
-const btnExcluirPerfilOng = document.querySelector('.btnExcluir')
+const btnExcluirPerfilOng = document.getElementById('btnExcluirPerfil')
 
 const imgPerfilOng = document.getElementById('imageUpload')
 const imgPreview = document.getElementById('imgSubida')
