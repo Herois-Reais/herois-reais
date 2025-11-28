@@ -1,6 +1,8 @@
-import { botaoCriarCard, imagemPreview, imagemUpload, inputBeneficiosDoadores, inputData, inputDuracao, inputQtdItensDoarem, inputQtdVoluntarios, inputTempoDescanso, inputTipoDoacao, inputTitulo, textDescricao, textUpload } from "./elementosHTML.js"
+import { botaoCriarCard, imagemPreview, imagemUpload, inputBeneficiosDoadores, inputData, inputDuracao, inputQtdItensDoarem, inputQtdVoluntarios, inputTempoDescanso, inputTipoDoacao, inputTitulo, selectTipoCard, textDescricao, textUpload } from "./elementosHTML.js"
 
 const localStorageKey = 'listaProjetosOng'
+
+const localStorageOngLogadaKey = 'ongLogada'
 
 // SALVA A IMAGEM NO LOCALSTORAGE
 imagemUpload.addEventListener('change', function(event){
@@ -27,7 +29,6 @@ imagemUpload.addEventListener('change', function(event){
 })
 
 
-
 // FUNÇÃO PARA COLOCAR AS INFORMAÇÕES DAS INPUTS NO LOCAL STORAGE
 function salvarInformacoesCardLocalStorage(event){
     event.preventDefault()
@@ -50,6 +51,24 @@ function salvarInformacoesCardLocalStorage(event){
         return
     }
 
+    if(!selectTipoCard || selectTipoCard === '' || selectTipoCard ==='vazio'){
+        alert('Escolha uma opção válida para este campo')
+        return
+    }
+
+    const ongLogadaJSON = localStorage.getItem(localStorageOngLogadaKey)
+    const dadosOngLogada = ongLogadaJSON ? JSON.parse(ongLogadaJSON) : null
+    
+    let nomeOngValue = 'ong não encontrada'
+
+    if(dadosOngLogada && dadosOngLogada.ongNome){
+        nomeOngValue = dadosOngLogada.ongNome
+    }
+    else {
+        alert("ERRO: Ong não encontrada, faça o login novamente")
+        window.location.href = "../loginOng/index.html"
+    }
+
     const novoCard = {
         id: Date.now(),
         titulo: inputTitulo.value,
@@ -61,7 +80,9 @@ function salvarInformacoesCardLocalStorage(event){
         qtdItensDoarem: inputQtdItensDoarem.value,
         beneficios: inputBeneficiosDoadores.value,
         descricao: textDescricao.value,
-        imagem: imagemCapa
+        imagem: imagemCapa,
+        nome: nomeOngValue,
+        tipoCard: selectTipoCard.value
     }
 
     const cardsExistentes = JSON.parse(localStorage.getItem(localStorageKey)) || []
@@ -85,5 +106,6 @@ function salvarInformacoesCardLocalStorage(event){
     
     window.location.href = "../homeOng/homeOng.html"
 }
+
 
 botaoCriarCard.addEventListener('click', salvarInformacoesCardLocalStorage)
