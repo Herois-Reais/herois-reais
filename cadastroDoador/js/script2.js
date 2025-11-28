@@ -134,6 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(`🎉 Cadastro realizado com sucesso! Bem-vindo(a) ${nome}`);
         
         form.reset();
-        window.location.href = 'index.html'; 
+        window.location.href = '../loginUsuario/index.html'; 
     });
 });

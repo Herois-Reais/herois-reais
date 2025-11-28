@@ -1,3 +1,8 @@
+const deleteBtn = document.querySelector(".close-modal");
+const confirmOverlay = document.getElementById("confirmOverlay");
+const yesBtn = document.getElementById("confirmYes");
+const noBtn = document.getElementById("confirmNo");
+
 const form = document.getElementById('formInfoUsu')
 const nomeUsuario = document.getElementById('inputNomeUsu')
 const emailUsuario = document.getElementById('inputEmailUsu')
@@ -9,6 +14,10 @@ const textUpload = document.querySelector('.textUpload')
 const btnSalvarAlteracoes = document.getElementById('btnSalvarAlteracoesUsu')
 
 export {
+    deleteBtn,
+    confirmOverlay,
+    yesBtn,
+    noBtn,
     form,
     nomeUsuario,
     emailUsuario,

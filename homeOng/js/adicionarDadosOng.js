@@ -176,6 +176,7 @@ function excluirDadosOng(){
     localStorage.removeItem(localStorageOngLogadaKey)
 
     const chaveFoto = getLocalStorageKeyFoto(dadosOngLogada.ongNome)
+    localStorage.removeItem(chaveFoto)
 
     alert("Perfil da ONG excluído com sucesso!")
 

@@ -16,7 +16,7 @@ function verificaUsuario(event){
         localStorage.setItem(localStorageUsuarioLogadoKey, JSON.stringify(usuarioEncontrado))
 
         alert(`Bem-vindo(a): ${usuarioEncontrado.nome}`)
-        window.location.href = '../Perfil/INDEX.HTML'
+        window.location.href = '../homeDoadorComLogin/INDEX.HTML'
     } 
     else {
         alert("Usuário não encontrado. ente novamnete ou faça o cadastro")

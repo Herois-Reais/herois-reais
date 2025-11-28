@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (btnCriarConta) {
             btnCriarConta.addEventListener('click', (e) => {
                 e.preventDefault();
-                window.location.href = 'cadastro-doador.html';
+                window.location.href = '../cadastroDoador/cadastro-doador.html';
             });
         }
     }

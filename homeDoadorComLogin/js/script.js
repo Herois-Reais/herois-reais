@@ -55,6 +55,35 @@ if(contactForm){
 }
 
 
+function mostrarImagemPerfil(){
+  const imgPerfil = document.getElementById('imgPerfil')
+  if(!imgPerfil){
+    return
+  }
+
+  const localStorageUsuarioLogadoKey = 'usuarioLogado'
+  const usuarioLogadoJSON = localStorage.getItem(localStorageUsuarioLogadoKey)
+  const dadosUsuario = usuarioLogadoJSON ? JSON.parse(usuarioLogadoJSON) : null
+
+  if(dadosUsuario && dadosUsuario.nome){
+    const nomeUsuarioLogado = dadosUsuario.nome
+    const chaveImg = `imgPerfilUsuario_${nomeUsuarioLogado}`
+    const imgSalva = localStorage.getItem(chaveImg)
+
+    if(imgSalva){
+      imgPerfil.src = imgSalva
+    }
+    else{
+      imgPerfil.src = "../imgs/userSemImg.png"
+    }
+  }
+  else {
+    imgPerfil.src = "../imgs/userSemImg.png"
+  }
+}
+
+mostrarImagemPerfil()
+
 document.getElementById("openHistoricoBtn").addEventListener("click", () => {
     window.location.href = "../Perfil/perfil.html";
 });
