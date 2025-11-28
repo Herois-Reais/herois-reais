@@ -15,6 +15,8 @@ const inputBeneficiosDoadores = document.getElementById('inputBeneficios')
 const textDescricao = document.getElementById('cardTextDescricao')
 const botaoCriarCard = document.getElementById('btnCriarCard')
 
+const selectTipoCard = document.getElementById('selectObjetivoCard')
+
 export{
     imagemUpload,
     imagemPreview,
@@ -29,5 +31,6 @@ export{
     inputTipoDoacao,
     inputBeneficiosDoadores,
     textDescricao,
-    botaoCriarCard
+    botaoCriarCard,
+    selectTipoCard
 }

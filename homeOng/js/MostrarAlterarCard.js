@@ -1,8 +1,7 @@
 const localStorageKey = 'listaProjetosOng'
+const localStorageOngLogadaKey = 'ongLogada'
 const cardContainer = document.getElementById('cardCampDoaVolsContainer')
 const pontoDeInjecao = document.querySelector('.cardCampDoaVolTitleEPlus');
-
-
 
 function criarCardOng(projeto){
     const titulo = projeto.titulo || 'Sem título'
@@ -12,6 +11,7 @@ function criarCardOng(projeto){
     const qtdVoluntarios = projeto.qtdVoluntarios || '0'
     const imagem = projeto.imagem || ''
     const id = projeto.id
+    const nomeOng = projeto.nome
 
     return `
     <div class="card sessoesCardsCriados">
@@ -27,7 +27,7 @@ function criarCardOng(projeto){
 
                 <div class="card-content"> <!-- Informações do card do projeto da ong -->
                     <div class="content">
-                        <p>ONG X - ${titulo}</p>
+                        <p>${nomeOng} - ${titulo}</p>
                         <p>${data}</p>
                         <p>${descricao}</p>
                     </div>
@@ -54,22 +54,31 @@ function criarCardOng(projeto){
 }
 
 
-
 function mostrarCardsSalvos(){
     const dadosSalvos = localStorage.getItem(localStorageKey)
     const listaProjetos = dadosSalvos ? JSON.parse(dadosSalvos) : []
+
+    const ongLogadaJSON = localStorage.getItem(localStorageOngLogadaKey)
+    const ongLogada = ongLogadaJSON ? JSON.parse(ongLogadaJSON) : null
+
+    if(!ongLogada || !ongLogada.ongNome){
+        console.log("Nenhuma ong ou nome da Ong encontrado");
+        return
+    }
+
+    const projetosDaOngLogada = listaProjetos.filter(projeto => projeto.nome === ongLogada.ongNome)
     
     if(!pontoDeInjecao){
         console.log("Não foi achado o .cardCampDoaVolTitleEPlus");
         return
     }
 
-    if (listaProjetos.length > 0){
-        listaProjetos.forEach(projeto => {
+    if (projetosDaOngLogada.length > 0){
+        projetosDaOngLogada.forEach(projeto => {
             pontoDeInjecao.insertAdjacentHTML('afterend', criarCardOng(projeto))
         });
 
-        console.log(`Cards adicionados: ${listaProjetos.length}`);
+        console.log(`Cards adicionados: ${projetosDaOngLogada.length}`);
         botaoExcluir()
     } else {
         console.log('Nenhum projeto foi encontrado');
