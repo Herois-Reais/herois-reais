@@ -16,6 +16,9 @@ const cnpjOng = document.getElementById('inputCnpjOng')
 const botaoSalvarAlteracoes = document.getElementById('btnSalvarAlteracoes')
 const emailOng = document.getElementById('inputEmail')
 
+const totalItensArrecadadosSpan = document.getElementById('totalItensArrecadados')
+const totalVoluntariosSpan = document.getElementById('totalVoluntarios')
+
 export {
     btnMenuHamburguer,
     perfilOngContainer,
@@ -31,5 +34,7 @@ export {
     senhaOng,
     cnpjOng,
     botaoSalvarAlteracoes,
-    emailOng
+    emailOng,
+    totalItensArrecadadosSpan,
+    totalVoluntariosSpan
 }

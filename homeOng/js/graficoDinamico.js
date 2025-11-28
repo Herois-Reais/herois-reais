@@ -1,9 +1,68 @@
+import { totalItensArrecadadosSpan, totalVoluntariosSpan } from "./elementosHTML.js"
+
 Chart.register(ChartDataLabels)
 
+const localStorageProjetosKey = 'listaProjetosOng'
+const localStorageOngLogadaKey = 'ongLogada'
+
+function calcularDadosGraficos(){
+    const ongLogadaJSON = localStorage.getItem(localStorageOngLogadaKey)
+    const ongLogada = ongLogadaJSON ? JSON.parse(ongLogadaJSON) : null
+
+    if(!ongLogada || !ongLogada.ongNome){
+        console.error("ONG logada não encontrada")
+        return{
+            doacoesAtuais: 0,
+            metaDoacoes: 0,
+            voluntariosAtuais: 0,
+            metaVoluntarios: 0
+        }
+    }
+
+    const dadosSalvosProjetos = localStorage.getItem(localStorageProjetosKey)
+    const listaProjetosOng = dadosSalvosProjetos ? JSON.parse(dadosSalvosProjetos) : []
+
+    const projetosOngLogada = listaProjetosOng.filter(projeto => projeto.nome === ongLogada.ongNome)
+
+    const novaMetaDoacoes = projetosOngLogada.reduce((total, projeto) => {
+        const qtd = parseInt(projeto.qtdItensDoarem)
+        return total + (isNaN(qtd) ? 0 : qtd)
+    }, 0)
+
+    const novaMetaVoluntarios = projetosOngLogada.reduce((total, projeto) => {
+        const qtd = parseInt(projeto.qtdVoluntarios)
+        return total + (isNaN(qtd) ? 0 : qtd)
+    }, 0)
+
+    const doacoesAtuais = 0
+    const voluntariosAtuais = 0
+
+    return {
+        doacoesAtuais,
+        metaDoacoes: novaMetaDoacoes > 0 ? novaMetaDoacoes : 0,
+        voluntariosAtuais,
+        metaVoluntarios: novaMetaVoluntarios > 0 ? novaMetaVoluntarios : 0
+    }
+}
+
+const dadosCalculados = calcularDadosGraficos()
+
+function atualizarValoresHTML(dados){
+    if(totalItensArrecadadosSpan){
+        totalItensArrecadadosSpan.textContent = dados.metaDoacoes
+    }
+
+    if(totalVoluntariosSpan){
+        totalVoluntariosSpan.textContent = dados.metaVoluntarios
+    }
+}
+
+atualizarValoresHTML(dadosCalculados)
+
 // GRÁFICO DAS DOAÇÕES
-const doacoesAtuais = 10
-const metaDoacoes = 100
-const doacoesFaltandes = metaDoacoes - doacoesAtuais
+const doacoesAtuais = dadosCalculados.doacoesAtuais
+const metaDoacoes = dadosCalculados.metaDoacoes
+const doacoesFaltandes = metaDoacoes - doacoesAtuais < 0 ? 0 : metaDoacoes - doacoesAtuais
 
 const dadosDoacoes = {
     labels: ['Doações Atuais', 'Faltantes'],
@@ -22,9 +81,9 @@ const dadosDoacoes = {
 
 
 // GRÁFICO DAS VOLUNTARIADOS
-const voluntariosAtuais = 15
-const metaVoluntarios = 150
-const voluntariosFaltantes = metaVoluntarios - voluntariosAtuais
+const voluntariosAtuais = dadosCalculados.voluntariosAtuais
+const metaVoluntarios = dadosCalculados.metaVoluntarios
+const voluntariosFaltantes = metaVoluntarios - voluntariosAtuais < 0 ? 0 : metaVoluntarios - voluntariosAtuais
 
 const dadosVoluntarios = {
     labels: ['Voluntários atuais', 'Faltantes'],
@@ -105,16 +164,27 @@ const configuracaoVoluntarios = {
 }
 
 
-const contextoDoacoes = document.getElementById('meuGrafico').getContext('2d')
-const contextoVoluntarios = document.getElementById('meuGrafico2').getContext('2d')
+const contextoDoacoes = document.getElementById('meuGrafico') ? document.getElementById('meuGrafico').getContext('2d') : null
+const contextoVoluntarios = document.getElementById('meuGrafico2') ? document.getElementById('meuGrafico2').getContext('2d') :  null
 
 
-const meuGrafico = new Chart(
-    contextoDoacoes,
-    configuracaoDoacoes
-)
+if(contextoDoacoes){
+        const meuGrafico = new Chart(
+        contextoDoacoes,
+        configuracaoDoacoes
+    )
+}
+else{
+    console.error("Elemento canvas do gráfico de doações não encontrado");
+}
 
-const meuGrafico2 = new Chart(
-    contextoVoluntarios,
-    configuracaoVoluntarios
-)
+
+if(contextoVoluntarios){
+        const meuGrafico2 = new Chart(
+        contextoVoluntarios,
+        configuracaoVoluntarios
+    )
+}
+else{
+    console.error("Elemento canvas do gráfico de voluntários não encontrado");
+}
