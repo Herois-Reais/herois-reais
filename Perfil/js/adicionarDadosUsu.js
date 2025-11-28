@@ -6,7 +6,7 @@ const localStorageUsuarioLogadoKey = 'usuarioLogado'
 let nomeUsuarioLogado = null
 
 function getLocalStorageKeyImg(usuarioNome){
-    return `imgPerfilOng_${usuarioNome}`
+    return `imgPerfilUsuario_${usuarioNome}`
 }
 
 function salvarImagem(){
