@@ -358,6 +358,7 @@ body.dark .campanhas .card {
 }
 
 
+
 .splide {
     
     visibility: visible !important;
@@ -374,6 +375,7 @@ body.dark .campanhas .card {
 }
 
 .splide__list {
+    
     visibility: visible !important;
     display: flex !important;
     gap: 30px !important; /* Espaço entre os cards */
@@ -381,6 +383,7 @@ body.dark .campanhas .card {
 }
 
 .splide__slide {
+    
     visibility: visible !important;
     flex: 0 0 auto !important;
     width: 300px !important; /* Largura fixa para cada card */
@@ -390,6 +393,7 @@ body.dark .campanhas .card {
 
 /* ESTILOS DOS CARDS DENTRO DO SPLIDE */
 .splide__slide .card {
+    
     border: 5px solid #1976D2;
     overflow: hidden;
     width: 100%;
@@ -416,6 +420,7 @@ body.dark .campanhas .card {
 }
 
 .splide__slide .card-content {
+    
     padding: 20px;
     background: var(--color-auxiliary-primary);
     text-align: center;
@@ -428,6 +433,7 @@ body.dark .campanhas .card {
 
 /* SETAS DE NAVEGAÇÃO */
 .splide__arrow {
+    
     background: var(--color-primary);
     width: 40px;
     height: 40px;
@@ -465,6 +471,44 @@ body.dark .voluntarios h1 {
 body.dark .voluntarios p {
     color: white;
 }
+
+/*
+
+*/
+/* FLIP CARD – Não altera seu .card */
+.flip-card {
+    width: 100%;
+    height: 500px;
+    perspective: 1200px;
+}
+
+.flip-card-inner {
+    width: 100%;
+    
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .6s ease;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    
+    transform: rotateY(180deg);
+}
+
 
 /* ========== ESPAÇO LARANJA ========== */
 .espaco-laranja {

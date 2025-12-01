@@ -23,6 +23,12 @@
 
       <!-- Lado Esquerdo -->
       <div class="left-panel">
+        <button type="button" class="btnVoltar">
+            <a href="../homeDoadorComLogin/INDEX.HTML">
+                <i class="fa-solid fa-angle-left"></i>
+            </a>
+        </button>
+
         <h1>Histórico de boas ações</h1>
 
         <div class="table">
@@ -52,7 +58,7 @@
             <span class="textUpload">Adicionar imagem de perfil</span>
         </label>
 
-        <p class="points">Pontos totais: 100</p>
+        <p class="points">Pontos totais: <span id="pontosTotais">0</span></p>
 
         <form class="profile-form" id="formInfoUsu">
           <input type="text" placeholder="Ametista Faceta-5 Corte-8XM" required id="inputNomeUsu">

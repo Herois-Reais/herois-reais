@@ -10,12 +10,32 @@ body {
 
 header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 30px;
   margin: 50px 0;
   width: 90%;
   justify-self: center;
+}
+
+.tituloTermos{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 100px;
+}
+
+.tituloTermos h1{
+  font-size: 35px;
+  text-align: left;
+}
+
+.updated{
+  margin-left:auto;
+  color: #23282e;
+  font-size:12px
 }
 
 .btnVoltar{
@@ -26,6 +46,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: flex-start;
 }
 
 .btnVoltar:hover{
@@ -62,6 +83,33 @@ main {
   gap: 10px;
 }
 
+.section{
+  margin:40px 0;
+  padding: 20px;
+  border: 2px solid var(--color-action-primary);
+  border-radius: 10px;
+  background: var(--color-action-primary);
+}
+
+code{
+  background:#f4f7f9;
+  padding:2px 6px;
+  border-radius:6px;
+  font-size:90%
+}
+
+.footer{
+  font-size:13px;
+  color:var(--color-theme-clear);
+  margin-top:28px;
+  border-top:1px solid #eef3ee;
+  padding-top:12px
+}
+
+a{
+  color:var(--color-theme-clear);
+  text-decoration:none
+}
 
 
 /* ------------------ RESPOSIVIDADE */

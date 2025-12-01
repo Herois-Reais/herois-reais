@@ -93,11 +93,24 @@ body{
 }
 
 
+.brand a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 5px;
+}
 
+.logo { 
+  width:70px; 
+  height:70px; 
+  object-fit:contain; 
+}
 
-.brand { display:flex; align-items:center; gap:12px; }
-.logo { width:40px; height:40px; object-fit:contain; }
-.brand-name { font-weight:700; letter-spacing:0.6px; color:#fff; }
+.brand-name { 
+  font-weight:700; 
+  letter-spacing:0.6px; 
+  color:#fff; 
+}
 
 .main-nav { display:flex; gap:18px; align-items:center; }
 .main-nav .nav-link {

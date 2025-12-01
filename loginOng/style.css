@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -33,6 +34,30 @@ body {
 
 .form-image img {
     width: 31rem;
+}
+
+.btnVoltar{
+    border: none;
+    width: 45px;
+    height: 45px;
+    background-color: #2E662E;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: all 0.5s;
+    margin-bottom: 50px;
+}
+
+.btnVoltar:hover{
+    border: 2px solid #000;
+    box-shadow: 0px 0px 3px 1px rgba(0 ,0 ,0 ,1);
+    -webkit-box-shadow: 0px 0px 3px 1px rgba(0 ,0 ,0 ,1);
+    -moz-box-shadow: 0px 0px 3px 1px rgba(0 ,0 ,0 ,1);
+}
+
+.btnVoltar a i{
+    font-size: 30px;
+    color: #FFF;
 }
 
 .form {
