@@ -66,23 +66,6 @@
     white-space: nowrap;
 }
 
-.barratopo .direita {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-}
-
-.barratopo .logo-topo {
-    display: flex;
-    align-items: center;
-}
-
-.barratopo .logo-topo img {
-    height: 90px;
-    width: auto;
-    display: block;
-}
-
 @media screen and (max-width: 768px) {
     .barratopo {
         padding: 0 0.75rem;
@@ -103,11 +86,6 @@
     
     .barratopo .tituloprincipal {
         font-size: 1rem !important;
-    }
-    
-    .barratopo .logo-topo img {
-        height: 48px;
-        flex-shrink: 0;
     }
     
     .fundo {
