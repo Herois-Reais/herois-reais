@@ -85,6 +85,32 @@
   margin:0;
 }
 
+.btnVoltar{
+    border: none;
+    width: 45px;
+    height: 45px;
+    background-color: #2E662E;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnVoltar:hover{
+    border: 2px solid #FFF;
+    box-shadow: 0px 0px 3px 1px rgba(255 ,255 ,255 ,1);
+    -webkit-box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 1);
+}
+
+.btnVoltar a i{
+    font-size: 30px;
+    color: #FFF;
+}
+
 .table{
   display:flex;
   gap:12px;
