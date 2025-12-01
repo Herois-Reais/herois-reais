@@ -144,27 +144,6 @@ html, body {
     transform: translateY(-2px);
 }
 
-
-.direita {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-
-.logotopo,
-.logo-topo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logotopo img,
-.logo-topo img {
-    height: 90px; /* aumentado */
-    width: auto;
-    display: block;
-}
 /* Caixa roxa para a seleção (modal/card) */
 .modal-content.cardselecao,
 .cardselecao {
@@ -189,8 +168,6 @@ html, body {
 }
 
 @media screen and (max-width: 768px) {
-    .logotopo img,
-    .logo-topo img { height: 48px; /* reduzido para mobile */ }
     .tituloprincipal { max-width: calc(100% - 140px); }
 }
 
@@ -203,6 +180,7 @@ html, body {
     align-items: center;
     margin-right: 5%; 
     margin-left: auto;
+    margin-top: 50px;
 }
 
 .conteudoprincipal .columns {
